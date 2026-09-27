@@ -25,7 +25,9 @@ body {
   width: 34%;
   background: #1f2d3d;
   color: #eef1f5;
-  padding: 20mm 8mm;
+  padding: 12mm 8mm;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .photo {
@@ -74,7 +76,11 @@ body {
   margin: 0 0 3mm 0;
 }
 
-.sidebar .block { margin-bottom: 7mm; }
+.sidebar .block {
+  margin-bottom: 7mm;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
 
 .contact-list, .plain-list {
   list-style: none;
@@ -112,9 +118,11 @@ body {
 .main {
   display: table-cell;
   width: 66%;
-  padding: 20mm 12mm;
+  padding: 14mm 12mm;
   background: #ffffff;
   vertical-align: top;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .main h2 {
@@ -131,7 +139,11 @@ body {
 
 .summary { margin: 0; text-align: justify; }
 
-.entry { margin-bottom: 5mm; }
+.entry {
+  margin-bottom: 5mm;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
 .entry:last-child { margin-bottom: 0; }
 
 .entry-header {

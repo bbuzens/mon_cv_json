@@ -5,21 +5,14 @@
     "image": "photo.jpg",
     "email": "benoit.buzens@gmail.com",
     "phone": "06 31 02 35 27",
-    "url": "",
+    "url": "https://www.linkedin.com/in/benoit-buzens-cybersec-architect/",
     "summary": "Fort de 10 ans d'expérience sur des services essentiels (secteur santé), en tant qu'ingénieur QA et DevOps, j'ai conçu et arbitré des choix d'architecture technique et réseau, avec une approche structurée par les risques et une culture de fiabilité exigeante. En reconversion vers l'architecture cybersécurité, je définis des systèmes sécurisés \"by design\" (EBIOS RM, ISO 27001) — convaincu que la sécurité se construit dès la conception.",
     "location": {
       "city": "Le Mans",
       "region": "Pays de la Loire",
       "postalCode": "72000",
       "countryCode": "FR"
-    },
-    "profiles": [
-      {
-        "network": "LinkedIn",
-        "username": "",
-        "url": ""
-      }
-    ]
+    }
   },
   "work": [
     {
@@ -154,6 +147,24 @@
     {"name": "ISTQB Foundation", "date": "2013", "issuer": "ISTQB"},
     {"name": "TOEIC — 845 pts", "date": "2010", "issuer": ""}
   ],
-  "interests": [],
+  "interests": [
+    {
+      "name" : "Sports de montagne",
+      "keywords": [
+        "Ski",
+        "Ski de randonnée",
+        "Escalade",
+        "Randonnée alpine"
+      ]
+    },
+    {
+      "name": "Danse",
+      "keywords": [
+        "Lindy Hop",
+        "Solo Jazz",
+        "Blues"
+      ]
+    }
+  ],
   "projects": []
 }
