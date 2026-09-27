@@ -15,12 +15,13 @@ body {
 
 .page {
   width: 210mm;
-  min-height: 297mm;
-  display: flex;
+  display: table;
+  table-layout: fixed;
 }
 
-/* --- Sidebar --- */
+/* --- Sidebar (cellule de table : se répète et pagine proprement) --- */
 .sidebar {
+  display: table-cell;
   width: 34%;
   background: #1f2d3d;
   color: #eef1f5;
@@ -109,8 +110,11 @@ body {
 
 /* --- Main column --- */
 .main {
+  display: table-cell;
   width: 66%;
   padding: 20mm 12mm;
+  background: #ffffff;
+  vertical-align: top;
 }
 
 .main h2 {

@@ -54,6 +54,17 @@
     </div>
     {% endif %}
 
+    {% if certificates %}
+    <div class="block">
+      <h2>Certifications</h2>
+      <ul class="plain-list">
+        {% for c in certificates %}
+        <li><strong>{{ c.name }}</strong><br><span class="muted">{{ c.issuer }}{% if c.issuer and c.date %} — {% endif %}{{ c.date }}</span></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
     {% if interests %}
     <div class="block">
       <h2>Divers</h2>

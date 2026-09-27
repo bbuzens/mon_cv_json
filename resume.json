@@ -1,96 +1,159 @@
 {
   "basics": {
-    "name": "Prénom NOM",
-    "label": "Intitulé de poste visé",
+    "name": "Benoît BUZENS",
+    "label": "Architecte Cybersécurité (reconversion) | Ex-DevOps & Qualité Logicielle, Services essentiels",
     "image": "photo.jpg",
-    "email": "prenom.nom@email.com",
-    "phone": "+33 6 00 00 00 00",
-    "url": "https://votresite.fr",
-    "summary": "Résumé professionnel en 2 à 3 lignes : votre positionnement, votre expertise clé et ce que vous recherchez. C'est la première chose lue par le recruteur, elle doit être percutante.",
+    "email": "benoit.buzens@gmail.com",
+    "phone": "06 31 02 35 27",
+    "url": "",
+    "summary": "Fort de 10 ans d'expérience sur des services essentiels (secteur santé), en tant qu'ingénieur QA et DevOps, j'ai conçu et arbitré des choix d'architecture technique et réseau, avec une approche structurée par les risques et une culture de fiabilité exigeante. En reconversion vers l'architecture cybersécurité, je définis des systèmes sécurisés \"by design\" (EBIOS RM, ISO 27001) — convaincu que la sécurité se construit dès la conception.",
     "location": {
-      "city": "Paris",
-      "region": "Île-de-France",
+      "city": "Le Mans",
+      "region": "Pays de la Loire",
+      "postalCode": "72000",
       "countryCode": "FR"
     },
     "profiles": [
       {
         "network": "LinkedIn",
-        "username": "prenom-nom",
-        "url": "https://linkedin.com/in/prenom-nom"
-      },
-      {
-        "network": "GitHub",
-        "username": "prenomnom",
-        "url": "https://github.com/prenomnom"
+        "username": "",
+        "url": ""
       }
     ]
   },
   "work": [
     {
-      "name": "Nom de l'entreprise",
-      "position": "Intitulé du poste",
-      "startDate": "2023-01",
-      "endDate": "",
-      "location": "Paris",
-      "summary": "Contexte de la mission en une phrase.",
+      "name": "GIE SESAM-Vitale",
+      "position": "Expert tests de performance backoffice — Équipe architecture technique & logicielle",
+      "startDate": "2025-03",
+      "endDate": "2026-08",
+      "location": "Le Mans",
+      "summary": "",
       "highlights": [
-        "Réalisation chiffrée n°1 (utilisez des verbes d'action et des résultats mesurables)",
-        "Réalisation chiffrée n°2",
-        "Réalisation chiffrée n°3"
+        "Concevoir et piloter la stratégie de tests de performance APCV (application carte Vitale)",
+        "Orienter les solutions techniques d'architecture pour les infrastructures de test (conteneurisation, solution d'injection, environnements et mode d'exécution)",
+        "Développer les outils et scripts de tests (JMeter, Java Spring, Python Fast API)",
+        "Analyser les performances et effectuer des recommandations",
+        "Progression de couverture de 5 à 30% du périmètre fonctionnel et de 20 à 80% du périmètre technique",
+        "Maîtrise des délais de campagne : réduction de 2 à 1 semaine"
       ]
     },
     {
-      "name": "Entreprise précédente",
-      "position": "Intitulé du poste",
-      "startDate": "2020-09",
-      "endDate": "2022-12",
-      "location": "Lyon",
-      "summary": "Contexte de la mission en une phrase.",
+      "name": "GIE SESAM-Vitale",
+      "position": "DevOps Team Lead",
+      "startDate": "2023-09",
+      "endDate": "2025-02",
+      "location": "Le Mans",
+      "summary": "",
       "highlights": [
-        "Réalisation chiffrée n°1",
-        "Réalisation chiffrée n°2"
+        "Constituer une System Team orientée CI/CD et intégration continue",
+        "Mettre en place les pipelines de livraison et industrialiser les déploiements",
+        "Coordonner l'équipe DevOps avec les équipes de développement, d'intégration et d'exploitation",
+        "Assurer l'interface avec les équipes MOA/MOE et les partenaires externes",
+        "Réduction de la durée de mise en production de 1 journée à 2 heures"
+      ]
+    },
+    {
+      "name": "GIE SESAM-Vitale",
+      "position": "Lead QA – Responsable validation & automatisation",
+      "startDate": "2018-08",
+      "endDate": "2023-09",
+      "location": "Le Mans",
+      "summary": "",
+      "highlights": [
+        "Définir les stratégies de tests fonctionnels, performance et automatisation",
+        "Choisir les solutions techniques d'architecture pour les infrastructures de test (conteneurisation, environnements d'exécution)",
+        "Piloter les équipes QA et de prestataires externes, de la validation jusqu'à la mise en production",
+        "Superviser la qualité du cycle de vie des applications",
+        "Architecture d'une plateforme de test sur une plateforme Docker"
+      ]
+    },
+    {
+      "name": "Orange (Gfi Informatique)",
+      "position": "Lead QA – Projet Authentification",
+      "startDate": "2016-10",
+      "endDate": "2018-07",
+      "location": "Caen",
+      "summary": "",
+      "highlights": [
+        "Définir et mettre en œuvre une stratégie de test sur système d'authentification",
+        "Automatiser les tests sous environnement Linux",
+        "Valider un service critique d'authentification",
+        "Analyser la qualité et rédiger un bilan de recette et non-conformité",
+        "Renforcement de l'automatisation de 30 à 60% du périmètre de test"
+      ]
+    },
+    {
+      "name": "Sopra Steria",
+      "position": "Analyste test / Référent QA",
+      "startDate": "2012-02",
+      "endDate": "2016-09",
+      "location": "Rennes",
+      "summary": "",
+      "highlights": [
+        "Valider un système de facturation/comptabilité (ALM)",
+        "Développer des scripts automatisés de tests (UFT, SQL)",
+        "Structurer les pratiques QA au sein d'équipes projet",
+        "Contribuer à la montée en compétences métier des équipes (EDF Commerce)"
       ]
     }
   ],
   "education": [
     {
-      "institution": "Nom de l'école / université",
-      "area": "Domaine d'étude",
-      "studyType": "Master",
-      "startDate": "2018-09",
-      "endDate": "2020-06",
-      "location": "Paris"
+      "institution": "CentraleSupélec",
+      "area": "Sécurité des systèmes d'information",
+      "studyType": "Mastère Spécialisé Cybersécurité (en cours)",
+      "startDate": "2026-09",
+      "endDate": "2027-08",
+      "location": "Rennes",
+      "summary": "Conception d'architectures sécurisées, sécurité réseau (IPSEC, TLS, PKI, pare-feux), durcissement des systèmes (Windows, Linux/Unix), analyse de risques (EBIOS RM), cryptographie appliquée et réponse à incident. Projet industriel et thèse professionnelle en fin de cursus."
+    },
+    {
+      "institution": "Université de Caen Normandie",
+      "area": "Mathématiques appliquées & Ingénierie Mécanique",
+      "studyType": "Master 2",
+      "startDate": "2004",
+      "endDate": "2010",
+      "location": "Caen",
+      "summary": "Modélisation mathématique, physique et informatique, simulation numérique et optimisation."
     }
   ],
   "skills": [
     {
-      "name": "Compétences techniques",
-      "keywords": ["Compétence 1", "Compétence 2", "Compétence 3", "Compétence 4"]
+      "name": "Cybersécurité & architecture",
+      "keywords": ["Analyse de risques (EBIOS RM)", "Architecture sécurisée", "ISO 27001"]
     },
     {
-      "name": "Outils",
-      "keywords": ["Outil 1", "Outil 2", "Outil 3"]
+      "name": "DevOps & infrastructure",
+      "keywords": ["Conteneurisation (Docker, Kubernetes, Openshift)", "CI/CD", "Linux / UNIX"]
+    },
+    {
+      "name": "Développement & qualité",
+      "keywords": ["Scripting (Python, Bash)", "Développement (C, Java)", "Stratégie de test", "Tests fonctionnels, performance, automatisation"]
+    },
+    {
+      "name": "Pilotage & management",
+      "keywords": ["Pilotage de projets et prestataires", "Coordination d'équipes techniques", "Delivery, ALM", "Agile (SAFe®, Kanban)"]
     }
   ],
   "languages": [
     {
       "language": "Français",
-      "fluency": "Langue maternelle"
+      "fluency": "Natif"
     },
     {
       "language": "Anglais",
-      "fluency": "B2 – Courant professionnel"
-    },
-    {
-      "language": "Espagnol",
-      "fluency": "A2 – Notions"
+      "fluency": "Professionnel"
     }
   ],
-  "interests": [
-    {
-      "name": "Permis B",
-      "keywords": ["Véhiculé"]
-    }
+  "certificates": [
+    {"name": "SAFe® Agilist", "date": "2024", "issuer": "Scaled Agile, Inc."},
+    {"name": "DevOps Foundation", "date": "2022", "issuer": "DevOps Institute"},
+    {"name": "ISTQB Advanced, Technical Test Analyst", "date": "2019", "issuer": "ISTQB"},
+    {"name": "ISTQB Advanced Test Analyst", "date": "2016", "issuer": "ISTQB"},
+    {"name": "ISTQB Foundation", "date": "2013", "issuer": "ISTQB"},
+    {"name": "TOEIC — 845 pts", "date": "2010", "issuer": ""}
   ],
+  "interests": [],
   "projects": []
 }
