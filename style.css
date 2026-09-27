@@ -1,0 +1,149 @@
+@page {
+  size: A4;
+  margin: 0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 10.5pt;
+  color: #222;
+  line-height: 1.4;
+}
+
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  display: flex;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+  width: 34%;
+  background: #1f2d3d;
+  color: #eef1f5;
+  padding: 20mm 8mm;
+}
+
+.photo {
+  width: 32mm;
+  height: 32mm;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 6mm auto;
+  border: 2px solid #4a6b8a;
+}
+
+.photo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2e3f53;
+  color: #cdd9e5;
+  font-size: 13pt;
+  font-weight: 600;
+  letter-spacing: 1pt;
+}
+
+.name {
+  font-size: 15pt;
+  text-align: center;
+  margin: 0 0 1mm 0;
+  font-weight: 600;
+  letter-spacing: 0.3pt;
+}
+
+.label {
+  text-align: center;
+  font-size: 9.5pt;
+  color: #a9c1d9;
+  margin: 0 0 8mm 0;
+}
+
+.sidebar h2 {
+  font-size: 9.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.8pt;
+  color: #7fa8cc;
+  border-bottom: 1px solid #3a4d63;
+  padding-bottom: 1.5mm;
+  margin: 0 0 3mm 0;
+}
+
+.sidebar .block { margin-bottom: 7mm; }
+
+.contact-list, .plain-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 9pt;
+}
+.contact-list li, .plain-list li { margin-bottom: 2mm; word-break: break-word; }
+
+.muted { color: #a9c1d9; font-size: 8.3pt; }
+
+.skill-cat {
+  font-size: 8.8pt;
+  font-weight: 600;
+  margin: 3mm 0 1.5mm 0;
+  color: #cdd9e5;
+}
+
+.tag-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2mm 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5mm;
+}
+.tag-list li {
+  background: #2e3f53;
+  border-radius: 3mm;
+  padding: 1mm 2.5mm;
+  font-size: 8pt;
+}
+
+/* --- Main column --- */
+.main {
+  width: 66%;
+  padding: 20mm 12mm;
+}
+
+.main h2 {
+  font-size: 11pt;
+  text-transform: uppercase;
+  letter-spacing: 0.6pt;
+  color: #1f2d3d;
+  border-bottom: 1.5pt solid #1f2d3d;
+  padding-bottom: 1.5mm;
+  margin: 0 0 4mm 0;
+}
+
+.main .block { margin-bottom: 7mm; }
+
+.summary { margin: 0; text-align: justify; }
+
+.entry { margin-bottom: 5mm; }
+.entry:last-child { margin-bottom: 0; }
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4mm;
+}
+
+.entry-title { font-weight: 600; font-size: 10.3pt; }
+.entry-date { font-size: 9pt; color: #555; white-space: nowrap; }
+.entry-location { font-size: 9pt; font-style: italic; color: #555; margin: 0.5mm 0 1mm 0; }
+.entry-summary { margin: 1mm 0; }
+
+.highlights {
+  margin: 1.5mm 0 0 0;
+  padding-left: 4mm;
+}
+.highlights li { margin-bottom: 1mm; }

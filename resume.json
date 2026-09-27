@@ -1,0 +1,96 @@
+{
+  "basics": {
+    "name": "Prénom NOM",
+    "label": "Intitulé de poste visé",
+    "image": "photo.jpg",
+    "email": "prenom.nom@email.com",
+    "phone": "+33 6 00 00 00 00",
+    "url": "https://votresite.fr",
+    "summary": "Résumé professionnel en 2 à 3 lignes : votre positionnement, votre expertise clé et ce que vous recherchez. C'est la première chose lue par le recruteur, elle doit être percutante.",
+    "location": {
+      "city": "Paris",
+      "region": "Île-de-France",
+      "countryCode": "FR"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "prenom-nom",
+        "url": "https://linkedin.com/in/prenom-nom"
+      },
+      {
+        "network": "GitHub",
+        "username": "prenomnom",
+        "url": "https://github.com/prenomnom"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Nom de l'entreprise",
+      "position": "Intitulé du poste",
+      "startDate": "2023-01",
+      "endDate": "",
+      "location": "Paris",
+      "summary": "Contexte de la mission en une phrase.",
+      "highlights": [
+        "Réalisation chiffrée n°1 (utilisez des verbes d'action et des résultats mesurables)",
+        "Réalisation chiffrée n°2",
+        "Réalisation chiffrée n°3"
+      ]
+    },
+    {
+      "name": "Entreprise précédente",
+      "position": "Intitulé du poste",
+      "startDate": "2020-09",
+      "endDate": "2022-12",
+      "location": "Lyon",
+      "summary": "Contexte de la mission en une phrase.",
+      "highlights": [
+        "Réalisation chiffrée n°1",
+        "Réalisation chiffrée n°2"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Nom de l'école / université",
+      "area": "Domaine d'étude",
+      "studyType": "Master",
+      "startDate": "2018-09",
+      "endDate": "2020-06",
+      "location": "Paris"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Compétences techniques",
+      "keywords": ["Compétence 1", "Compétence 2", "Compétence 3", "Compétence 4"]
+    },
+    {
+      "name": "Outils",
+      "keywords": ["Outil 1", "Outil 2", "Outil 3"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Français",
+      "fluency": "Langue maternelle"
+    },
+    {
+      "language": "Anglais",
+      "fluency": "B2 – Courant professionnel"
+    },
+    {
+      "language": "Espagnol",
+      "fluency": "A2 – Notions"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Permis B",
+      "keywords": ["Véhiculé"]
+    }
+  ],
+  "projects": []
+}
