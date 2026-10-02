@@ -33,7 +33,7 @@
     </div>
 
     {% if skills %}
-    <div class="block">
+    <div class="block block-skills">
       <h2>Compétences</h2>
       {% for s in skills %}
       <p class="skill-cat">{{ s.name }}</p>
@@ -115,7 +115,7 @@
       <div class="entry">
         <div class="entry-header">
           <span class="entry-title">{{ e.studyType }}{% if e.area %}, {{ e.area }}{% endif %} — {{ e.institution }}</span>
-          <span class="entry-date">{{ e.startDate|date_fr }} – {{ e.endDate|date_fr }}</span>
+          <span class="entry-date">{% if e.startDate %}{{ e.startDate|date_fr }} – {% endif %}{{ e.endDate|date_fr }}</span>
         </div>
         {% if e.location %}<p class="entry-location">{{ e.location }}</p>{% endif %}
         {% if e.summary %}<p class="entry-summary">{{ e.summary }}</p>{% endif %}

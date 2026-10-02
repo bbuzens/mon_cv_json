@@ -6,7 +6,7 @@
     "email": "benoit.buzens@gmail.com",
     "phone": "06 31 02 35 27",
     "url": "https://www.linkedin.com/in/benoit-buzens/",
-    "summary": "10 ans d'expérience sur des services essentiels (santé, télécoms), comme Lead QA puis DevOps Team Lead.\nJ'y ai conçu et arbitré des choix techniques (conteneurisation, infrastructures de test et de déploiement) et piloté des équipes et des prestataires.\nEn reconversion, je me forme à la sécurité des systèmes et des réseaux, à l'analyse de risques (EBIOS RM) et à la conformité (ISO 27001), convaincu que la SSI se construit dès la conception.",
+    "summary": "10 ans d'expérience sur des services essentiels (santé, télécoms), comme Lead QA puis DevOps Team Lead.\nJ'y ai conçu des infrastructures de test et de déploiement, piloté des équipes et des prestataires, et contribué à la sécurisation des services (TLS serveur/mutuel, PKI, analyse de vulnérabilités).\nEn reconversion, je me forme à la sécurité des systèmes et des réseaux, à l'analyse de risques (EBIOS RM) et à la conformité (ISO 27001), convaincu que la SSI se construit dès la conception.",
     "location": {
       "city": "Le Mans"
     }
@@ -20,7 +20,7 @@
       "location": "Le Mans",
       "summary": "",
       "highlights": [
-        "Conduite des tests de performance de l'APCV (carte Vitale)",
+        "Tests de performance de l'APCV (carte Vitale), dont parcours authentifiés OIDC",
         "Architecture de bancs de test conteneurisés (JMeter)",
         "Couverture technique des tests portée de 20 à 80 %",
         "Durée des campagnes de tests divisée par 2"
@@ -35,7 +35,8 @@
       "summary": "",
       "highlights": [
         "Création d'une System Team CI/CD",
-        "Orchestration des évolutions de la chaîne de livraison",
+        "Analyse de vulnérabilités intégrée à la CI/CD (Trivy, Dependency-Track)",
+        "Étude de ZAP (DAST) à la demande du service sécurité",
         "Mise en production : de 1 journée à 2 heures"
       ]
     },
@@ -47,10 +48,12 @@
       "location": "Le Mans",
       "summary": "",
       "highlights": [
-        "Définition des stratégies de test",
-        "Conception d'une plateforme de test Docker",
-        "Packaging Linux des livrables applicatifs",
-        "Pilotage des équipes QA et des prestataires"
+        "Intégration et vérification du TLS serveur et mutuel en préproduction et production",
+        "Maintenance d'une PKI de test, certificats X.509 (OpenSSL, P12, JKS)",
+        "Raccordements techniques des partenaires : diagnostic réseau (Wireshark, tcpdump, nmap, netcat)",
+        "Spécification des services F5 BIG-IP, TLS aligné sur l'ANSSI",
+        "Tests fonctionnels de l'authentification OIDC (jetons JWT)",
+        "Accompagnement des tests d'intrusion menés par Oppida"
       ]
     },
     {
@@ -62,8 +65,8 @@
       "summary": "",
       "highlights": [
         "Validation d'un service critique d'authentification",
-        "Pilotage de la recette",
-        "Scripting de tests de webservices",
+        "Audit de configuration des serveurs Linux d'intégration",
+        "Première évaluation de ZAP pour le service d'authentification",
         "Automatisation portée de 30 à 60 % des tests"
       ]
     },
@@ -95,24 +98,23 @@
       "institution": "Université de Caen Normandie",
       "area": "Mathématiques appliquées & Ingénierie Mécanique",
       "studyType": "Master 2",
-      "startDate": "2004-09",
-      "endDate": "2010-09",
+      "endDate": "2010",
       "location": "Caen",
       "summary": "Modélisation mathématique, physique et informatique, simulation numérique et optimisation"
     }
   ],
   "skills": [
     {
-      "name": "Cybersécurité (MS en cours)",
-      "keywords": ["Analyse de risques (EBIOS RM)", "Sécurité réseau (TLS, PKI, IPSEC)", "Conformité (ISO 27001)"]
+      "name": "Cybersécurité",
+      "keywords": ["PKI X.509, TLS serveur et mutuel (OpenSSL)", "OIDC (jetons JWT)", "Scan de vulnérabilités (Trivy, Dependency-Track)", "Analyse réseau (Wireshark, tcpdump, nmap)", "EBIOS RM, ISO 27001 (MS en cours)"]
     },
     {
       "name": "DevOps & infrastructure",
-      "keywords": ["Conteneurisation (Docker, Kubernetes, OpenShift)", "CI/CD", "Linux / UNIX"]
+      "keywords": ["Docker, Kubernetes, OpenShift", "CI/CD, secrets (Vault)", "Linux / UNIX"]
     },
     {
       "name": "Développement & qualité",
-      "keywords": ["Programmation et scripting (Java, Python)", "Stratégie et automatisation des tests (JMeter)"]
+      "keywords": ["Java, Python (scripting)", "Stratégie et automatisation des tests (JMeter)"]
     },
     {
       "name": "Pilotage & management",
@@ -138,15 +140,15 @@
     {
       "name": "Montagne",
       "keywords": [
-        "Ski de randonnée",
-        "Escalade"
+        "ski de randonnée",
+        "escalade"
       ]
     },
     {
       "name": "Danse",
       "keywords": [
-        "Lindy hop",
-        "Solo jazz"
+        "lindy hop",
+        "solo jazz"
       ]
     }
   ],
