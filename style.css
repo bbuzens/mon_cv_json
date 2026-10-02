@@ -155,7 +155,10 @@ body {
 .main .block { margin-bottom: 7mm; }
 .main .block:last-child { margin-bottom: 0; }
 
-.summary { margin: 0; text-align: justify; }
+/* Profil : aligné à gauche (pas d'espaces étirés) ; chaque ligne du
+   champ basics.summary devient un court paragraphe. */
+.summary { margin: 0 0 1.5mm 0; text-align: left; }
+.summary:last-child { margin-bottom: 0; }
 
 .entry {
   margin-bottom: 4mm;
@@ -176,8 +179,12 @@ body {
 .entry-location { font-size: 9pt; font-style: italic; color: #555; margin: 0.5mm 0 1mm 0; }
 .entry-summary { margin: 1mm 0; }
 
-.highlights {
+/* work.highlights = résultats et réalisations significatives
+   (la description du poste est dans work.summary) */
+.results {
   margin: 1.5mm 0 0 0;
   padding-left: 4mm;
+  list-style: square;
 }
-.highlights li { margin-bottom: 1mm; }
+.results li { margin-bottom: 1mm; }
+.results li::marker { color: #2f6f9f; }

@@ -82,7 +82,7 @@
     {% if basics.summary %}
     <section class="block">
       <h2>Profil</h2>
-      <p class="summary">{{ basics.summary }}</p>
+      {% for para in basics.summary.split('\n') if para.strip() %}<p class="summary">{{ para | trim }}</p>{% endfor %}
     </section>
     {% endif %}
 
@@ -98,7 +98,7 @@
         {% if w.location %}<p class="entry-location">{{ w.location }}</p>{% endif %}
         {% if w.summary %}<p class="entry-summary">{{ w.summary }}</p>{% endif %}
         {% if w.highlights %}
-        <ul class="highlights">
+        <ul class="results">
           {% for h in w.highlights %}<li>{{ h }}</li>{% endfor %}
         </ul>
         {% endif %}
