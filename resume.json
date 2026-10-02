@@ -20,10 +20,10 @@
       "location": "Le Mans",
       "summary": "",
       "highlights": [
-        "Conception et pilotage de la stratégie de tests de performance de l'APCV (application carte Vitale)",
+        "Élaboration et conduite de la stratégie de tests de performance de l'APCV (application carte Vitale)",
         "Architecture des bancs de test conteneurisés et outillage (JMeter, Java Spring, Python FastAPI)",
         "Couverture portée de 5 à 30 % du périmètre fonctionnel et de 20 à 80 % du périmètre technique",
-        "Durée de campagne réduite de 2 semaines à 1 semaine"
+        "Campagnes de tests ramenées de 2 semaines à 1 semaine"
       ]
     },
     {
@@ -36,8 +36,8 @@
       "highlights": [
         "Création d'une System Team CI/CD et industrialisation des déploiements",
         "Coordination entre développement, intégration, exploitation et MOA/MOE",
-        "Packaging Linux des applications pour la production",
-        "Durée de mise en production réduite de 1 journée à 2 heures"
+        "Packaging Linux des livrables applicatifs",
+        "Mise en production accélérée : de 1 journée à 2 heures"
       ]
     },
     {
@@ -62,8 +62,8 @@
       "summary": "",
       "highlights": [
         "Validation d'un service critique d'authentification",
-        "Stratégie et bilan de recette, scripting de tests de webservices",
-        "Automatisation portée de 30 à 60 % du périmètre de test"
+        "Plan et bilan de recette, scripting de tests de webservices",
+        "Automatisation portée de 30 à 60 % des tests"
       ]
     },
     {
@@ -74,7 +74,7 @@
       "location": "Rennes",
       "summary": "",
       "highlights": [
-        "Validation d'un système de facturation (EDF Commerce)",
+        "Qualification d'un système de facturation (EDF Commerce)",
         "Développement de scripts de tests (UFT, SQL) et structuration des pratiques QA"
       ]
     }
@@ -110,7 +110,7 @@
     },
     {
       "name": "Développement & qualité",
-      "keywords": ["Développement et scripting (Java, Python)", "Stratégie de test", "Tests fonctionnels, performance (JMeter), automatisation"]
+      "keywords": ["Programmation et scripting (Java, Python)", "Stratégie de test", "Tests fonctionnels, performance (JMeter), automatisation"]
     },
     {
       "name": "Pilotage & management",
