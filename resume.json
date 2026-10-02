@@ -20,7 +20,7 @@
       "location": "Le Mans",
       "summary": "",
       "highlights": [
-        "Tests de performance de l'APCV (carte Vitale), dont parcours OIDC/JWT",
+        "Tests de performance de l'APCV (carte Vitale), dont parcours authentifiés OIDC",
         "Architecture de bancs de test conteneurisés (JMeter)",
         "Couverture technique des tests portée de 20 à 80 %",
         "Durée des campagnes de tests divisée par 2"
@@ -52,7 +52,7 @@
         "Maintenance d'une PKI de test, certificats X.509 (OpenSSL, P12, JKS)",
         "Raccordements techniques des partenaires : diagnostic réseau (Wireshark, tcpdump, nmap, netcat)",
         "Spécification des services F5 BIG-IP, TLS aligné sur l'ANSSI",
-        "Tests fonctionnels des authentifications OIDC et JWT",
+        "Tests fonctionnels de l'authentification OIDC (jetons JWT)",
         "Accompagnement des tests d'intrusion menés par Oppida"
       ]
     },
@@ -106,7 +106,7 @@
   "skills": [
     {
       "name": "Cybersécurité",
-      "keywords": ["TLS, PKI, X.509 (OpenSSL)", "OIDC, JWT, TLS mutuel", "SCA : Trivy, Dependency-Track", "Analyse réseau (Wireshark, tcpdump, nmap)", "EBIOS RM, ISO 27001 (MS en cours)"]
+      "keywords": ["TLS, PKI, X.509 (OpenSSL)", "OIDC (jetons JWT)", "SCA : Trivy, Dependency-Track", "Analyse réseau (Wireshark, tcpdump, nmap)", "EBIOS RM, ISO 27001 (MS en cours)"]
     },
     {
       "name": "DevOps & infrastructure",
