@@ -36,7 +36,6 @@
       "highlights": [
         "Création d'une System Team CI/CD et industrialisation des déploiements",
         "Orchestration des évolutions de la chaîne de livraison",
-        "Packaging Linux des livrables applicatifs",
         "Mise en production accélérée : de 1 journée à 2 heures"
       ]
     },
@@ -50,6 +49,7 @@
       "highlights": [
         "Définition des stratégies de test (fonctionnel, performance, automatisation)",
         "Conception d'une plateforme de test conteneurisée (Docker)",
+        "Packaging Linux des livrables applicatifs",
         "Pilotage des équipes QA et des prestataires jusqu'en production"
       ]
     },
