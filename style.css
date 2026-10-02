@@ -198,3 +198,7 @@ body {
 }
 .results li { margin-bottom: 0; }
 .results li::marker { color: #2f6f9f; }
+
+/* Les compétences peuvent se poursuivre sur la page suivante plutôt que
+   de basculer en bloc et de laisser la colonne vide. */
+.sidebar .block-skills { break-inside: auto; page-break-inside: auto; }
