@@ -78,13 +78,13 @@ body {
 
 .label {
   text-align: center;
-  font-size: 9.5pt;
+  font-size: 10pt;
   color: #a9c1d9;
   margin: 0 0 8mm 0;
 }
 
 .sidebar h2 {
-  font-size: 9.5pt;
+  font-size: 10pt;
   text-transform: uppercase;
   letter-spacing: 0.8pt;
   color: #7fa8cc;
@@ -103,14 +103,14 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 9pt;
+  font-size: 9.5pt;
 }
 .contact-list li, .plain-list li { margin-bottom: 1.5mm; word-break: break-word; }
 
-.muted { color: #a9c1d9; font-size: 8.3pt; }
+.muted { color: #a9c1d9; font-size: 9pt; }
 
 .skill-cat {
-  font-size: 8.8pt;
+  font-size: 9.5pt;
   font-weight: 600;
   margin: 3mm 0 1.5mm 0;
   color: #cdd9e5;
@@ -127,8 +127,8 @@ body {
 .tag-list li {
   background: #2e3f53;
   border-radius: 3mm;
-  padding: 1mm 2.5mm;
-  font-size: 8pt;
+  padding: 0.6mm 2.2mm;
+  font-size: 9pt;
 }
 
 /* --- Main column --- */
@@ -175,8 +175,8 @@ body {
 }
 
 .entry-title { font-weight: 600; font-size: 10.3pt; }
-.entry-date { font-size: 9pt; color: #555; white-space: nowrap; }
-.entry-location { font-size: 9pt; font-style: italic; color: #555; margin: 0.5mm 0 1mm 0; }
+.entry-date { font-size: 9.5pt; color: #555; white-space: nowrap; }
+.entry-location { font-size: 9.5pt; font-style: italic; color: #555; margin: 0.5mm 0 1mm 0; }
 .entry-summary { margin: 1mm 0; }
 
 /* work.highlights : 2 à 4 réalisations clés par expérience */
