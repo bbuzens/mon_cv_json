@@ -61,7 +61,7 @@
       "summary": "",
       "highlights": [
         "Validation d'un service critique d'authentification",
-        "Stratégie de test, automatisation sous Linux et bilan de recette",
+        "Stratégie de test en environnement Linux et bilan de recette",
         "Automatisation portée de 30 à 60 % du périmètre de test"
       ]
     },
@@ -74,7 +74,7 @@
       "summary": "",
       "highlights": [
         "Validation d'un système de facturation (EDF Commerce)",
-        "Automatisation des tests (UFT, SQL) et structuration des pratiques QA"
+        "Développement de scripts de tests (UFT, SQL) et structuration des pratiques QA"
       ]
     }
   ],
