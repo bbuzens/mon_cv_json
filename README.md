@@ -10,8 +10,8 @@ HTML/CSS que vous maîtrisez entièrement, et un export PDF fidèle au CSS via
   éditer au quotidien.
 - `template.html` — le gabarit Jinja2 qui structure le CV.
 - `style.css` — le style visuel (sidebar sombre, une page A4).
-- `generate_pdf.py` — script qui assemble le tout et génère `output/cv.html`
-  et `output/cv.pdf`.
+- `generate_pdf.py` — script qui assemble le tout et génère `output/NOM.html`
+  et `output/NOM.pdf` (voir « Nom des fichiers » ci-dessous).
 - `photo.jpg` (optionnel) — à ajouter vous-même à la racine du projet. Sans
   ce fichier, un cercle avec vos initiales est affiché à la place.
 
@@ -33,7 +33,16 @@ pip install jinja2 weasyprint
    python generate_pdf.py
    ```
 
-4. Récupérez `output/cv.pdf` pour vos candidatures, et `output/cv.html` pour
+   **Nom des fichiers** : par défaut, il est composé à partir de
+   `basics.name` et du début de `basics.label` (jusqu'au premier `|`, `(` ou
+   `,`), par exemple `cv-benoit-buzens-ingenieur-cybersecurite`. Pour
+   l'imposer :
+
+   ```bash
+   python generate_pdf.py -o cv-candidature-acme
+   ```
+
+4. Récupérez `output/NOM.pdf` pour vos candidatures, et `output/NOM.html` pour
    une publication directe sur votre site personnel (copiez `style.css` à
    côté).
 

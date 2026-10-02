@@ -4,15 +4,18 @@ Génère un CV en PDF (et en HTML) à partir de resume.json (format JSON Resume)
 et du template.html / style.css.
 
 Usage :
-    python generate_pdf.py
+    python generate_pdf.py                  # nom déduit de basics.name + basics.label
+    python generate_pdf.py -o cv-candidature  # nom imposé
 
-Sorties :
-    output/cv.html   -> version publiable telle quelle sur un site perso
-    output/cv.pdf    -> version PDF pour candidature
+Sorties (NOM = nom choisi ou déduit) :
+    output/NOM.html  -> version publiable telle quelle sur un site perso
+    output/NOM.pdf   -> version PDF pour candidature
 """
 
+import argparse
 import json
-import os
+import re
+import unicodedata
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
@@ -41,7 +44,35 @@ def format_date(value):
     return year
 
 
+def slugify(text):
+    """"Ingénieur Cybersécurité" -> "ingenieur-cybersecurite"."""
+    text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
+
+
+def default_output_name(basics):
+    """Compose "cv-<nom>-<titre>" à partir de basics.name et basics.label.
+
+    Seule la partie du label avant le premier "|", "(" ou "," est gardée,
+    pour éviter un nom de fichier à rallonge.
+    """
+    label = re.split(r"[|(,]", basics.get("label", ""), maxsplit=1)[0]
+    parts = ["cv", slugify(basics.get("name", "")), slugify(label)]
+    return "-".join(p for p in parts if p)
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Génère le CV en HTML et PDF.")
+    parser.add_argument(
+        "-o", "--output",
+        help="nom des fichiers de sortie, sans extension "
+             "(par défaut : déduit de basics.name et basics.label)",
+    )
+    return parser.parse_args()
+
+
 def main():
+    args = parse_args()
     OUTPUT_DIR.mkdir(exist_ok=True)
 
     with open(BASE_DIR / "resume.json", encoding="utf-8") as f:
@@ -62,11 +93,13 @@ def main():
         initials=initials,
     )
 
-    html_path = OUTPUT_DIR / "cv.html"
+    output_name = args.output or default_output_name(data.get("basics", {}))
+
+    html_path = OUTPUT_DIR / f"{output_name}.html"
     html_path.write_text(rendered_html, encoding="utf-8")
     print(f"HTML généré : {html_path}")
 
-    pdf_path = OUTPUT_DIR / "cv.pdf"
+    pdf_path = OUTPUT_DIR / f"{output_name}.pdf"
     HTML(string=rendered_html, base_url=str(BASE_DIR)).write_pdf(str(pdf_path))
     print(f"PDF généré  : {pdf_path}")
 
