@@ -6,7 +6,7 @@
     "email": "benoit.buzens@gmail.com",
     "phone": "06 31 02 35 27",
     "url": "https://www.linkedin.com/in/benoit-buzens/",
-    "summary": "14 ans d'expérience, dont 10 sur des services essentiels (santé, télécoms), comme Lead QA puis DevOps Team Lead.\nJ'y ai conçu des infrastructures de test et de déploiement, piloté des équipes et des prestataires, et contribué à la sécurisation des services (TLS serveur/mutuel, PKI, analyse de vulnérabilités).\nEn reconversion, je me forme à la sécurité des systèmes et des réseaux, à l'analyse de risques (EBIOS RM) et à la conformité (ISO 27001), convaincu que la SSI se construit dès la conception.",
+    "summary": "14 ans d'expérience, dont 10 sur des services essentiels (santé, télécoms), comme Lead QA puis DevOps Team Lead.\nJ'y ai conçu des infrastructures de test et de déploiement, piloté des équipes et des prestataires, et contribué à la sécurisation des services (TLS serveur/mutuel, PKI, analyse de vulnérabilités).\nEn reconversion, je me forme à la sécurité des systèmes et des réseaux, à l'analyse de risques (EBIOS RM) et à la conformité (ISO 27001), convaincu que la SSI se construit dès la conception.\nJe recherche un stage en cybersécurité à partir d'avril 2027.",
     "location": {
       "city": "Le Mans"
     }
@@ -42,7 +42,7 @@
     },
     {
       "name": "GIE SESAM-Vitale",
-      "position": "Lead QA – Référent QA & automatisation",
+      "position": "Lead QA – Pilote QA & Intégration",
       "startDate": "2018-08",
       "endDate": "2023-09",
       "location": "Le Mans",
