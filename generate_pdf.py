@@ -21,6 +21,25 @@ from weasyprint import HTML
 BASE_DIR = Path(__file__).parent
 OUTPUT_DIR = BASE_DIR / "output"
 
+MOIS = [
+    "janvier", "février", "mars", "avril", "mai", "juin",
+    "juillet", "août", "septembre", "octobre", "novembre", "décembre",
+]
+
+
+def format_date(value):
+    """Convertit une date ISO JSON Resume en "mois année" (ex. "2025-03" -> "mars 2025").
+
+    Une date réduite à l'année ("2010") est affichée telle quelle.
+    """
+    if not value:
+        return value
+    parts = str(value).split("-")
+    year = parts[0]
+    if len(parts) >= 2 and parts[1].isdigit() and 1 <= int(parts[1]) <= 12:
+        return f"{MOIS[int(parts[1]) - 1]} {year}"
+    return year
+
 
 def main():
     OUTPUT_DIR.mkdir(exist_ok=True)
@@ -35,6 +54,7 @@ def main():
     initials = "".join(p[0].upper() for p in name_parts[:2] if p)
 
     env = Environment(loader=FileSystemLoader(str(BASE_DIR)))
+    env.filters["date_fr"] = format_date
     template = env.get_template("template.html")
     rendered_html = template.render(
         **data,

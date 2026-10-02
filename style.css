@@ -3,6 +3,23 @@
   margin: 0;
 }
 
+/* Bande de la sidebar répétée sur chaque page (position: fixed en PDF) :
+   elle descend jusqu'en bas même quand le contenu de la colonne s'arrête
+   avant (page 2, etc.). Rectangle plein -> bord net, sans dégradé. */
+.sidebar-bg { display: none; }
+@media print {
+  .sidebar-bg {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 71.4mm; /* 34 % de 210mm, comme .sidebar */
+    height: 297mm;
+    background: #1f2d3d;
+    z-index: -1;
+  }
+}
+
 * { box-sizing: border-box; }
 
 body {

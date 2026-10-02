@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="sidebar-bg"></div>
 <div class="page">
 
   <aside class="sidebar">
@@ -59,7 +60,7 @@
       <h2>Certifications</h2>
       <ul class="plain-list">
         {% for c in certificates %}
-        <li><strong>{{ c.name }}</strong><br><span class="muted">{{ c.issuer }}{% if c.issuer and c.date %} — {% endif %}{{ c.date }}</span></li>
+        <li><strong>{{ c.name }}</strong><br><span class="muted">{{ c.issuer }}{% if c.issuer and c.date %} — {% endif %}{{ c.date|date_fr }}</span></li>
         {% endfor %}
       </ul>
     </div>
@@ -92,7 +93,7 @@
       <div class="entry">
         <div class="entry-header">
           <span class="entry-title">{{ w.position }} — {{ w.name }}</span>
-          <span class="entry-date">{{ w.startDate }} – {{ w.endDate if w.endDate else 'Présent' }}</span>
+          <span class="entry-date">{{ w.startDate|date_fr }} – {{ w.endDate|date_fr if w.endDate else 'Présent' }}</span>
         </div>
         {% if w.location %}<p class="entry-location">{{ w.location }}</p>{% endif %}
         {% if w.summary %}<p class="entry-summary">{{ w.summary }}</p>{% endif %}
@@ -113,7 +114,7 @@
       <div class="entry">
         <div class="entry-header">
           <span class="entry-title">{{ e.studyType }}{% if e.area %}, {{ e.area }}{% endif %} — {{ e.institution }}</span>
-          <span class="entry-date">{{ e.startDate }} – {{ e.endDate }}</span>
+          <span class="entry-date">{{ e.startDate|date_fr }} – {{ e.endDate|date_fr }}</span>
         </div>
         {% if e.location %}<p class="entry-location">{{ e.location }}</p>{% endif %}
       </div>
