@@ -6,7 +6,7 @@
     "email": "benoit.buzens@gmail.com",
     "phone": "06 31 02 35 27",
     "url": "https://www.linkedin.com/in/benoit-buzens/",
-    "summary": "10 ans d'expérience sur des services essentiels (santé, télécoms), comme Lead QA puis DevOps Team Lead.\nJ'y ai conçu des infrastructures de test et de déploiement, piloté des équipes et des prestataires, et contribué à la sécurisation des services (TLS serveur/mutuel, PKI, analyse de vulnérabilités).\nEn reconversion, je me forme à la sécurité des systèmes et des réseaux, à l'analyse de risques (EBIOS RM) et à la conformité (ISO 27001), convaincu que la SSI se construit dès la conception.",
+    "summary": "14 ans d'expérience, dont 10 sur des services essentiels (santé, télécoms), comme Lead QA puis DevOps Team Lead.\nJ'y ai conçu des infrastructures de test et de déploiement, piloté des équipes et des prestataires, et contribué à la sécurisation des services (TLS serveur/mutuel, PKI, analyse de vulnérabilités).\nEn reconversion, je me forme à la sécurité des systèmes et des réseaux, à l'analyse de risques (EBIOS RM) et à la conformité (ISO 27001), convaincu que la SSI se construit dès la conception.",
     "location": {
       "city": "Le Mans"
     }
@@ -20,8 +20,8 @@
       "location": "Le Mans",
       "summary": "",
       "highlights": [
-        "Tests de performance de l'APCV (carte Vitale), dont parcours authentifiés OIDC",
-        "Architecture de bancs de test conteneurisés (JMeter)",
+        "Tests de performance sur microservices APCV (carte Vitale), dont parcours authentifiés OIDC",
+        "Architecture de bancs de test (JMeter)",
         "Couverture technique des tests portée de 20 à 80 %",
         "Durée des campagnes de tests divisée par 2"
       ]
@@ -42,18 +42,18 @@
     },
     {
       "name": "GIE SESAM-Vitale",
-      "position": "Lead QA – Responsable validation & automatisation",
+      "position": "Lead QA – Référent QA & automatisation",
       "startDate": "2018-08",
       "endDate": "2023-09",
       "location": "Le Mans",
       "summary": "",
       "highlights": [
-        "Intégration et vérification du TLS serveur et mutuel en préproduction et production",
+        "Intégration et vérification de TLS serveur et mutuel en staging et production",
         "Maintenance d'une PKI de test, certificats X.509 (OpenSSL, P12, JKS)",
         "Raccordements techniques des partenaires : diagnostic réseau (Wireshark, tcpdump, nmap, netcat)",
         "Spécification des services F5 BIG-IP, TLS aligné sur l'ANSSI",
         "Tests fonctionnels de l'authentification OIDC (jetons JWT)",
-        "Accompagnement des tests d'intrusion menés par Oppida"
+        "Accompagnement de tests d'intrusion menés par Oppida"
       ]
     },
     {
@@ -66,7 +66,7 @@
       "highlights": [
         "Validation d'un service critique d'authentification",
         "Audit de configuration des serveurs Linux d'intégration",
-        "Première évaluation de ZAP pour le service d'authentification",
+        "Benchmark de ZAP pour test du service d'authentification",
         "Automatisation portée de 30 à 60 % des tests"
       ]
     },
