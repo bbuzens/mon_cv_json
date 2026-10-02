@@ -98,9 +98,18 @@
         {% if w.location %}<p class="entry-location">{{ w.location }}</p>{% endif %}
         {% if w.summary %}<p class="entry-summary">{{ w.summary }}</p>{% endif %}
         {% if w.highlights %}
+        {% set activites = w.highlights | reject('resultat') | list %}
+        {% set resultats = w.highlights | select('resultat') | list %}
+        {% if activites %}
         <ul class="highlights">
-          {% for h in w.highlights %}<li>{{ h }}</li>{% endfor %}
+          {% for h in activites %}<li>{{ h }}</li>{% endfor %}
         </ul>
+        {% endif %}
+        {% if resultats %}
+        <ul class="results">
+          {% for r in resultats %}<li><span class="plus">+</span> {{ r[1:] | trim }}</li>{% endfor %}
+        </ul>
+        {% endif %}
         {% endif %}
       </div>
       {% endfor %}
@@ -117,6 +126,7 @@
           <span class="entry-date">{{ e.startDate|date_fr }} – {{ e.endDate|date_fr }}</span>
         </div>
         {% if e.location %}<p class="entry-location">{{ e.location }}</p>{% endif %}
+        {% if e.summary %}<p class="entry-summary">{{ e.summary }}</p>{% endif %}
       </div>
       {% endfor %}
     </section>

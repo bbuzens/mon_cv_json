@@ -55,6 +55,8 @@ def main():
 
     env = Environment(loader=FileSystemLoader(str(BASE_DIR)))
     env.filters["date_fr"] = format_date
+    # Une puce commençant par "+" est un résultat chiffré, affiché à part
+    env.tests["resultat"] = lambda h: str(h).lstrip().startswith("+")
     template = env.get_template("template.html")
     rendered_html = template.render(
         **data,
