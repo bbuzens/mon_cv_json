@@ -27,7 +27,7 @@ body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 10.5pt;
   color: #222;
-  line-height: 1.5; /* interligne unique pour tout le CV */
+  line-height: 1.55; /* interligne unique pour tout le CV */
 }
 
 .page {
@@ -42,7 +42,7 @@ body {
   width: 34%;
   background: #1f2d3d;
   color: #eef1f5;
-  padding: 12mm 10mm; /* marges latérales ≥ 1 cm */
+  padding: 12mm 11mm; /* marges latérales > 1 cm */
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
@@ -112,23 +112,32 @@ body {
 .skill-cat {
   font-size: 10pt;
   font-weight: 600;
-  margin: 3mm 0 1.5mm 0;
-  color: #cdd9e5;
+  margin: 3mm 0 1mm 0;
+  color: #ffffff;
 }
 
+/* Compétences en liste simple : une compétence par ligne, puce discrète
+   dans la couleur d'accent, retrait suspendu si le libellé passe à la ligne
+   (les étiquettes arrondies se coupaient sur deux lignes à 10 pt). */
 .tag-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 2mm 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5mm;
+  margin: 0 0 1mm 0;
 }
 .tag-list li {
-  background: #2e3f53;
-  border-radius: 3mm;
-  padding: 0.6mm 2.2mm;
+  position: relative;
+  padding-left: 3.5mm;
+  margin-bottom: 0.8mm;
   font-size: 10pt;
+}
+.tag-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2.1mm;
+  width: 1.4mm;
+  height: 1.4mm;
+  background: #7fa8cc;
 }
 
 /* --- Main column --- */
