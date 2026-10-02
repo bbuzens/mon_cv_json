@@ -95,7 +95,8 @@
           <span class="entry-title">{{ w.position }} — {{ w.name }}</span>
           <span class="entry-date">{{ w.startDate|date_fr }} – {{ w.endDate|date_fr if w.endDate else 'Présent' }}</span>
         </div>
-        {% if w.location %}<p class="entry-location">{{ w.location }}</p>{% endif %}
+        {% set d = duree(w.startDate, w.endDate) %}
+        {% if w.location or d %}<p class="entry-location">{{ w.location }}{% if w.location and d %} · {% endif %}{% if d %}<span class="entry-duration">{{ d }}</span>{% endif %}</p>{% endif %}
         {% if w.summary %}<p class="entry-summary">{{ w.summary }}</p>{% endif %}
         {% if w.highlights %}
         <ul class="results">
