@@ -11,6 +11,12 @@
       "city": "Le Mans"
     }
   },
+  "profiles": [
+    {
+      "network": "Hack The Box",
+      "url": "https://profile.hackthebox.com/profile/019cd228-9bdc-7233-840f-27c227931521?utm_medium=copy_url"
+    }
+  ],
   "work": [
     {
       "name": "GIE SESAM-Vitale",
