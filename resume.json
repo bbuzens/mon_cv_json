@@ -34,7 +34,7 @@
       "location": "Le Mans",
       "summary": "",
       "highlights": [
-        "Création d'une System Team CI/CD",
+        "Création d'une System Team CI/CD (Docker, Kubernetes, OpenShift)",
         "Analyse de vulnérabilités intégrée à la CI/CD (Trivy, Dependency-Track)",
         "Étude de ZAP (DAST) à la demande du service sécurité",
         "Mise en production : de 1 journée à 2 heures"
@@ -66,7 +66,7 @@
       "highlights": [
         "Validation d'un service critique d'authentification",
         "Audit de configuration des serveurs Linux d'intégration",
-        "Benchmark de ZAP pour test du service d'authentification",
+        "Évaluation de ZAP pour tester le service d'authentification",
         "Automatisation portée de 30 à 60 % des tests"
       ]
     },
