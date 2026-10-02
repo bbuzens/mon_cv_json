@@ -20,10 +20,10 @@
       "location": "Le Mans",
       "summary": "",
       "highlights": [
-        "Élaboration et conduite de la stratégie de tests de performance de l'APCV (application carte Vitale)",
-        "Architecture des bancs de test conteneurisés et outillage (JMeter, Java Spring, Python FastAPI)",
-        "Couverture portée de 5 à 30 % du périmètre fonctionnel et de 20 à 80 % du périmètre technique",
-        "Campagnes de tests ramenées de 2 semaines à 1 semaine"
+        "Conduite des tests de performance de l'APCV (carte Vitale)",
+        "Architecture de bancs de test conteneurisés (JMeter)",
+        "Couverture technique des tests portée de 20 à 80 %",
+        "Durée des campagnes de tests divisée par 2"
       ]
     },
     {
@@ -34,9 +34,9 @@
       "location": "Le Mans",
       "summary": "",
       "highlights": [
-        "Création d'une System Team CI/CD et industrialisation des déploiements",
+        "Création d'une System Team CI/CD",
         "Orchestration des évolutions de la chaîne de livraison",
-        "Mise en production accélérée : de 1 journée à 2 heures"
+        "Mise en production : de 1 journée à 2 heures"
       ]
     },
     {
@@ -47,10 +47,10 @@
       "location": "Le Mans",
       "summary": "",
       "highlights": [
-        "Définition des stratégies de test (fonctionnel, performance, automatisation)",
-        "Conception d'une plateforme de test conteneurisée (Docker)",
+        "Définition des stratégies de test",
+        "Conception d'une plateforme de test Docker",
         "Packaging Linux des livrables applicatifs",
-        "Pilotage des équipes QA et des prestataires jusqu'en production"
+        "Pilotage des équipes QA et des prestataires"
       ]
     },
     {
@@ -62,7 +62,8 @@
       "summary": "",
       "highlights": [
         "Validation d'un service critique d'authentification",
-        "Pilotage de la recette et scripting de tests de webservices",
+        "Pilotage de la recette",
+        "Scripting de tests de webservices",
         "Automatisation portée de 30 à 60 % des tests"
       ]
     },
@@ -75,7 +76,8 @@
       "summary": "",
       "highlights": [
         "Qualification d'un système de facturation (EDF Commerce)",
-        "Développement de scripts de tests (UFT, SQL) et structuration des pratiques QA"
+        "Scripts de tests automatisés (UFT, SQL)",
+        "Structuration des pratiques QA"
       ]
     }
   ],
