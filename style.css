@@ -155,7 +155,10 @@ body {
 .main .block { margin-bottom: 7mm; }
 .main .block:last-child { margin-bottom: 0; }
 
-.summary { margin: 0; text-align: justify; }
+/* Profil : aligné à gauche (pas d'espaces étirés) ; chaque ligne du
+   champ basics.summary devient un court paragraphe. */
+.summary { margin: 0 0 1.5mm 0; text-align: left; }
+.summary:last-child { margin-bottom: 0; }
 
 .entry {
   margin-bottom: 4mm;

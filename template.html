@@ -82,7 +82,7 @@
     {% if basics.summary %}
     <section class="block">
       <h2>Profil</h2>
-      <p class="summary">{{ basics.summary }}</p>
+      {% for para in basics.summary.split('\n') if para.strip() %}<p class="summary">{{ para | trim }}</p>{% endfor %}
     </section>
     {% endif %}
 
