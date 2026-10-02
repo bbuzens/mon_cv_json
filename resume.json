@@ -18,7 +18,7 @@
       "startDate": "2025-03",
       "endDate": "2026-08",
       "location": "Le Mans",
-      "summary": "Conception et pilotage de la stratégie de tests de performance de l'APCV (application carte Vitale) : choix d'architecture des infrastructures de test (conteneurisation, solution d'injection, environnements), développement des outils (JMeter, Java Spring, Python FastAPI), analyse des performances et recommandations.",
+      "summary": "Stratégie de tests de performance de l'APCV (application carte Vitale) : architecture des bancs de test conteneurisés, outillage (JMeter, Java Spring, Python FastAPI), analyse et recommandations.",
       "highlights": [
         "Couverture portée de 5 à 30 % du périmètre fonctionnel et de 20 à 80 % du périmètre technique",
         "Durée de campagne réduite de 2 à 1 semaine"
@@ -30,7 +30,7 @@
       "startDate": "2023-09",
       "endDate": "2025-02",
       "location": "Le Mans",
-      "summary": "Constitution d'une System Team CI/CD : pipelines de livraison, industrialisation des déploiements, coordination avec les équipes de développement, d'intégration et d'exploitation, interface avec les équipes MOA/MOE et les partenaires externes.",
+      "summary": "Création d'une System Team CI/CD : pipelines de livraison, industrialisation des déploiements, coordination entre développement, intégration, exploitation et MOA/MOE.",
       "highlights": [
         "Durée de mise en production réduite de 1 journée à 2 heures"
       ]
@@ -41,7 +41,7 @@
       "startDate": "2018-08",
       "endDate": "2023-09",
       "location": "Le Mans",
-      "summary": "Définition des stratégies de test (fonctionnel, performance, automatisation), choix d'architecture des infrastructures de test (conteneurisation, environnements d'exécution), pilotage des équipes QA et des prestataires externes jusqu'à la mise en production, supervision de la qualité du cycle de vie des applications.",
+      "summary": "Stratégies de test (fonctionnel, performance, automatisation), choix des infrastructures de test, pilotage des équipes QA et des prestataires jusqu'à la mise en production.",
       "highlights": [
         "Conception d'une plateforme de test conteneurisée (Docker)"
       ]
@@ -52,7 +52,7 @@
       "startDate": "2016-10",
       "endDate": "2018-07",
       "location": "Caen",
-      "summary": "Validation d'un service critique d'authentification : stratégie de test, automatisation sous Linux, analyse de la qualité, bilan de recette et de non-conformité.",
+      "summary": "Validation d'un service critique d'authentification : stratégie de test, automatisation sous Linux, bilan de recette.",
       "highlights": [
         "Automatisation portée de 30 à 60 % du périmètre de test"
       ]
@@ -63,7 +63,7 @@
       "startDate": "2012-02",
       "endDate": "2016-09",
       "location": "Rennes",
-      "summary": "Validation d'un système de facturation et de comptabilité (EDF Commerce, ALM) : scripts de tests automatisés (UFT, SQL), structuration des pratiques QA au sein des équipes projet, montée en compétences métier des équipes.",
+      "summary": "Validation d'un système de facturation (EDF Commerce) : automatisation des tests (UFT, SQL), structuration des pratiques QA.",
       "highlights": []
     }
   ],
