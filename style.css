@@ -176,8 +176,12 @@ body {
 .entry-location { font-size: 9pt; font-style: italic; color: #555; margin: 0.5mm 0 1mm 0; }
 .entry-summary { margin: 1mm 0; }
 
-.highlights {
+/* work.highlights = résultats et réalisations significatives
+   (la description du poste est dans work.summary) */
+.results {
   margin: 1.5mm 0 0 0;
   padding-left: 4mm;
+  list-style: square;
 }
-.highlights li { margin-bottom: 1mm; }
+.results li { margin-bottom: 1mm; }
+.results li::marker { color: #2f6f9f; }
