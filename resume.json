@@ -152,5 +152,15 @@
       ]
     }
   ],
-  "projects": []
+  "projects": [
+    {
+      "name": "Hack The Box — Junior Cybersecurity Analyst",
+      "url": "https://profile.hackthebox.com/profile/019cd228-9bdc-7233-840f-27c227931521",
+      "description": "Parcours métier préparant la certification CJCA · 89 % réalisé",
+      "highlights": [
+        "Reconnaissance et exploitation en environnement de lab (Nmap, Kali Linux)",
+        "Gestion d'incidents de sécurité (module en cours)"
+      ]
+    }
+  ]
 }

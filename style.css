@@ -202,3 +202,6 @@ body {
 /* Les compétences peuvent se poursuivre sur la page suivante plutôt que
    de basculer en bloc et de laisser la colonne vide. */
 .sidebar .block-skills { break-inside: auto; page-break-inside: auto; }
+
+/* Liens (ex. profil Hack The Box) : cliquables dans le PDF, sans changer l'aspect */
+.entry-title a { color: inherit; text-decoration: none; }

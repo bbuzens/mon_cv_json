@@ -108,6 +108,26 @@
     </section>
     {% endif %}
 
+    {% if projects %}
+    <section class="block">
+      <h2>Pratique cyber</h2>
+      {% for pr in projects %}
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">{% if pr.url %}<a href="{{ pr.url }}">{{ pr.name }}</a>{% else %}{{ pr.name }}{% endif %}</span>
+          {% if pr.startDate or pr.endDate %}<span class="entry-date">{{ pr.startDate|date_fr }}{% if pr.endDate %} – {{ pr.endDate|date_fr }}{% endif %}</span>{% endif %}
+        </div>
+        {% if pr.description %}<p class="entry-location">{{ pr.description }}</p>{% endif %}
+        {% if pr.highlights %}
+        <ul class="results">
+          {% for h in pr.highlights %}<li>{{ h }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </section>
+    {% endif %}
+
     {% if education %}
     <section class="block">
       <h2>Formation</h2>
@@ -124,19 +144,6 @@
     </section>
     {% endif %}
 
-    {% if projects %}
-    <section class="block">
-      <h2>Projets</h2>
-      {% for pr in projects %}
-      <div class="entry">
-        <div class="entry-header">
-          <span class="entry-title">{{ pr.name }}</span>
-        </div>
-        {% if pr.description %}<p class="entry-summary">{{ pr.description }}</p>{% endif %}
-      </div>
-      {% endfor %}
-    </section>
-    {% endif %}
   </main>
 
 </div>
