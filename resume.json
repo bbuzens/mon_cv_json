@@ -89,7 +89,7 @@
       "startDate": "2026-09",
       "endDate": "2027-08",
       "location": "Rennes",
-      "summary": "Conception d'architectures sécurisées, sécurité réseau (IPSEC, TLS, PKI, pare-feux), durcissement des systèmes (Windows, Linux/Unix), analyse de risques (EBIOS RM), cryptographie appliquée et réponse à incident."
+      "summary": "Conception d'architectures sécurisées, sécurité réseau (IPSEC, TLS, PKI, pare-feux), durcissement des systèmes (Windows, Linux/Unix), analyse de risques (EBIOS RM), cryptographie appliquée et réponse à incident"
     },
     {
       "institution": "Université de Caen Normandie",
@@ -98,7 +98,7 @@
       "startDate": "2004-09",
       "endDate": "2010-09",
       "location": "Caen",
-      "summary": "Modélisation mathématique, physique et informatique, simulation numérique et optimisation."
+      "summary": "Modélisation mathématique, physique et informatique, simulation numérique et optimisation"
     }
   ],
   "skills": [
