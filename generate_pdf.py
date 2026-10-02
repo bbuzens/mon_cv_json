@@ -16,6 +16,7 @@ import argparse
 import json
 import re
 import unicodedata
+from datetime import date
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
@@ -42,6 +43,37 @@ def format_date(value):
     if len(parts) >= 2 and parts[1].isdigit() and 1 <= int(parts[1]) <= 12:
         return f"{MOIS[int(parts[1]) - 1]} {year}"
     return year
+
+
+def format_duration(start, end=None):
+    """Durée d'une expérience, mois de début et de fin inclus.
+
+    "2025-03" -> "2026-08" donne "1 an et 6 mois" (mars à août inclus).
+    Sans date de fin (poste en cours), la durée court jusqu'au mois actuel.
+    Renvoie "" si une date n'est pas au format "AAAA-MM".
+    """
+    def months(value):
+        parts = str(value or "").split("-")
+        if len(parts) < 2 or not (parts[0].isdigit() and parts[1].isdigit()):
+            return None
+        return int(parts[0]) * 12 + int(parts[1]) - 1
+
+    if end:
+        end_m = months(end)
+    else:
+        today = date.today()
+        end_m = today.year * 12 + today.month - 1
+    start_m = months(start)
+    if start_m is None or end_m is None or end_m < start_m:
+        return ""
+    total = end_m - start_m + 1
+    years, rest = divmod(total, 12)
+    parts = []
+    if years:
+        parts.append(f"{years} an{'s' if years > 1 else ''}")
+    if rest:
+        parts.append(f"{rest} mois")
+    return " et ".join(parts)
 
 
 def slugify(text):
@@ -86,6 +118,7 @@ def main():
 
     env = Environment(loader=FileSystemLoader(str(BASE_DIR)))
     env.filters["date_fr"] = format_date
+    env.globals["duree"] = format_duration
     template = env.get_template("template.html")
     rendered_html = template.render(
         **data,

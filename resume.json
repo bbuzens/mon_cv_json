@@ -18,10 +18,12 @@
       "startDate": "2025-03",
       "endDate": "2026-08",
       "location": "Le Mans",
-      "summary": "Stratégie de tests de performance de l'APCV (application carte Vitale) : architecture des bancs de test conteneurisés, outillage (JMeter, Java Spring, Python FastAPI), analyse et recommandations.",
+      "summary": "",
       "highlights": [
+        "Élaboration et conduite de la stratégie de tests de performance de l'APCV (application carte Vitale)",
+        "Architecture des bancs de test conteneurisés et outillage (JMeter, Java Spring, Python FastAPI)",
         "Couverture portée de 5 à 30 % du périmètre fonctionnel et de 20 à 80 % du périmètre technique",
-        "Durée de campagne réduite de 2 à 1 semaine"
+        "Campagnes de tests ramenées de 2 semaines à 1 semaine"
       ]
     },
     {
@@ -30,9 +32,11 @@
       "startDate": "2023-09",
       "endDate": "2025-02",
       "location": "Le Mans",
-      "summary": "Création d'une System Team CI/CD : pipelines de livraison, industrialisation des déploiements, coordination entre développement, intégration, exploitation et MOA/MOE.",
+      "summary": "",
       "highlights": [
-        "Durée de mise en production réduite de 1 journée à 2 heures"
+        "Création d'une System Team CI/CD et industrialisation des déploiements",
+        "Orchestration des évolutions de la chaîne de livraison",
+        "Mise en production accélérée : de 1 journée à 2 heures"
       ]
     },
     {
@@ -41,9 +45,12 @@
       "startDate": "2018-08",
       "endDate": "2023-09",
       "location": "Le Mans",
-      "summary": "Stratégies de test (fonctionnel, performance, automatisation), choix des infrastructures de test, pilotage des équipes QA et des prestataires jusqu'à la mise en production.",
+      "summary": "",
       "highlights": [
-        "Conception d'une plateforme de test conteneurisée (Docker)"
+        "Définition des stratégies de test (fonctionnel, performance, automatisation)",
+        "Conception d'une plateforme de test conteneurisée (Docker)",
+        "Packaging Linux des livrables applicatifs",
+        "Pilotage des équipes QA et des prestataires jusqu'en production"
       ]
     },
     {
@@ -52,9 +59,11 @@
       "startDate": "2016-10",
       "endDate": "2018-07",
       "location": "Caen",
-      "summary": "Validation d'un service critique d'authentification : stratégie de test, automatisation sous Linux, bilan de recette.",
+      "summary": "",
       "highlights": [
-        "Automatisation portée de 30 à 60 % du périmètre de test"
+        "Validation d'un service critique d'authentification",
+        "Pilotage de la recette et scripting de tests de webservices",
+        "Automatisation portée de 30 à 60 % des tests"
       ]
     },
     {
@@ -63,8 +72,11 @@
       "startDate": "2012-02",
       "endDate": "2016-09",
       "location": "Rennes",
-      "summary": "Validation d'un système de facturation (EDF Commerce) : automatisation des tests (UFT, SQL), structuration des pratiques QA.",
-      "highlights": []
+      "summary": "",
+      "highlights": [
+        "Qualification d'un système de facturation (EDF Commerce)",
+        "Développement de scripts de tests (UFT, SQL) et structuration des pratiques QA"
+      ]
     }
   ],
   "education": [
@@ -75,7 +87,7 @@
       "startDate": "2026-09",
       "endDate": "2027-08",
       "location": "Rennes",
-      "summary": "Conception d'architectures sécurisées, sécurité réseau (IPSEC, TLS, PKI, pare-feux), durcissement des systèmes (Windows, Linux/Unix), analyse de risques (EBIOS RM), cryptographie appliquée et réponse à incident. Projet industriel et thèse professionnelle en fin de cursus."
+      "summary": "Conception d'architectures sécurisées, sécurité réseau (IPSEC, TLS, PKI, pare-feux), durcissement des systèmes (Windows, Linux/Unix), analyse de risques (EBIOS RM), cryptographie appliquée et réponse à incident."
     },
     {
       "institution": "Université de Caen Normandie",
@@ -98,7 +110,7 @@
     },
     {
       "name": "Développement & qualité",
-      "keywords": ["Développement et scripting (Java, Python)", "Stratégie de test", "Tests fonctionnels, performance (JMeter), automatisation"]
+      "keywords": ["Programmation et scripting (Java, Python)", "Stratégie de test", "Tests fonctionnels, performance (JMeter), automatisation"]
     },
     {
       "name": "Pilotage & management",
