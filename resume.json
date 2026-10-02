@@ -112,11 +112,11 @@
     },
     {
       "name": "Développement & qualité",
-      "keywords": ["Programmation et scripting (Java, Python)", "Stratégie de test", "Tests fonctionnels, performance (JMeter), automatisation"]
+      "keywords": ["Programmation et scripting (Java, Python)", "Stratégie et automatisation des tests (JMeter)"]
     },
     {
       "name": "Pilotage & management",
-      "keywords": ["Pilotage d'équipes et de prestataires", "Interface MOA/MOE et partenaires", "Agile (SAFe®, Kanban)"]
+      "keywords": ["Pilotage d'équipes et de prestataires", "Interface MOA/MOE et partenaires"]
     }
   ],
   "languages": [
@@ -126,33 +126,27 @@
     },
     {
       "language": "Anglais",
-      "fluency": "Professionnel"
+      "fluency": "Professionnel (TOEIC 845)"
     }
   ],
   "certificates": [
     {"name": "SAFe® Agilist", "date": "2024", "issuer": "Scaled Agile, Inc."},
     {"name": "DevOps Foundation", "date": "2022", "issuer": "DevOps Institute"},
-    {"name": "ISTQB Advanced, Technical Test Analyst", "date": "2019", "issuer": "ISTQB"},
-    {"name": "ISTQB Advanced Test Analyst", "date": "2016", "issuer": "ISTQB"},
-    {"name": "ISTQB Foundation", "date": "2013", "issuer": "ISTQB"},
-    {"name": "TOEIC — 845 pts", "date": "2010", "issuer": ""}
+    {"name": "ISTQB Advanced : Test Analyst, Technical Test Analyst", "date": "2019", "issuer": "ISTQB"}
   ],
   "interests": [
     {
-      "name" : "Sports de montagne",
+      "name": "Montagne",
       "keywords": [
-        "Ski",
         "Ski de randonnée",
-        "Escalade",
-        "Randonnée alpine"
+        "Escalade"
       ]
     },
     {
       "name": "Danse",
       "keywords": [
-        "Lindy Hop",
-        "Solo Jazz",
-        "Blues"
+        "Lindy hop",
+        "Solo jazz"
       ]
     }
   ],

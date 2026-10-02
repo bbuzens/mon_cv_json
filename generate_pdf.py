@@ -76,6 +76,11 @@ def format_duration(start, end=None):
     return " et ".join(parts)
 
 
+def short_url(url):
+    """"https://www.linkedin.com/in/x/" -> "linkedin.com/in/x" (tient sur une ligne)."""
+    return re.sub(r"^https?://(www\.)?", "", str(url or "")).rstrip("/")
+
+
 def slugify(text):
     """"Ingénieur Cybersécurité" -> "ingenieur-cybersecurite"."""
     text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode()
@@ -119,6 +124,7 @@ def main():
     env = Environment(loader=FileSystemLoader(str(BASE_DIR)))
     env.filters["date_fr"] = format_date
     env.globals["duree"] = format_duration
+    env.filters["short_url"] = short_url
     template = env.get_template("template.html")
     rendered_html = template.render(
         **data,
