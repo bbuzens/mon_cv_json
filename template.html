@@ -117,6 +117,7 @@
           <span class="entry-date">{{ e.startDate|date_fr }} – {{ e.endDate|date_fr }}</span>
         </div>
         {% if e.location %}<p class="entry-location">{{ e.location }}</p>{% endif %}
+        {% if e.summary %}<p class="entry-summary">{{ e.summary }}</p>{% endif %}
       </div>
       {% endfor %}
     </section>

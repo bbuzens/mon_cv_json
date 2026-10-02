@@ -153,11 +153,12 @@ body {
 }
 
 .main .block { margin-bottom: 7mm; }
+.main .block:last-child { margin-bottom: 0; }
 
 .summary { margin: 0; text-align: justify; }
 
 .entry {
-  margin-bottom: 5mm;
+  margin-bottom: 4mm;
   break-inside: avoid;
   page-break-inside: avoid;
 }
