@@ -6,7 +6,7 @@
     "email": "benoit.buzens@gmail.com",
     "phone": "06 31 02 35 27",
     "url": "https://www.linkedin.com/in/benoit-buzens/",
-    "summary": "10 ans d'expérience sur des services essentiels (santé, télécoms), comme Lead QA puis DevOps Team Lead.\nJ'y ai conçu des infrastructures de test et de déploiement, piloté des équipes et des prestataires, et contribué à la sécurisation des services (TLS mutuel, PKI, analyse de vulnérabilités).\nEn reconversion, je me forme à la sécurité des systèmes et des réseaux, à l'analyse de risques (EBIOS RM) et à la conformité (ISO 27001), convaincu que la SSI se construit dès la conception.",
+    "summary": "10 ans d'expérience sur des services essentiels (santé, télécoms), comme Lead QA puis DevOps Team Lead.\nJ'y ai conçu des infrastructures de test et de déploiement, piloté des équipes et des prestataires, et contribué à la sécurisation des services (TLS serveur/mutuel, PKI, analyse de vulnérabilités).\nEn reconversion, je me forme à la sécurité des systèmes et des réseaux, à l'analyse de risques (EBIOS RM) et à la conformité (ISO 27001), convaincu que la SSI se construit dès la conception.",
     "location": {
       "city": "Le Mans"
     }
@@ -106,7 +106,7 @@
   "skills": [
     {
       "name": "Cybersécurité",
-      "keywords": ["TLS, PKI, X.509 (OpenSSL)", "OIDC (jetons JWT)", "SCA : Trivy, Dependency-Track", "Analyse réseau (Wireshark, tcpdump, nmap)", "EBIOS RM, ISO 27001 (MS en cours)"]
+      "keywords": ["PKI X.509, TLS serveur et mutuel (OpenSSL)", "OIDC (jetons JWT)", "SCA : Trivy, Dependency-Track", "Analyse réseau (Wireshark, tcpdump, nmap)", "EBIOS RM, ISO 27001 (MS en cours)"]
     },
     {
       "name": "DevOps & infrastructure",
@@ -114,7 +114,7 @@
     },
     {
       "name": "Développement & qualité",
-      "keywords": ["Programmation et scripting (Java, Python)", "Stratégie et automatisation des tests (JMeter)"]
+      "keywords": ["Java, Python (scripting)", "Stratégie et automatisation des tests (JMeter)"]
     },
     {
       "name": "Pilotage & management",
