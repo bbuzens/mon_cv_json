@@ -36,6 +36,7 @@
       "highlights": [
         "Création d'une System Team CI/CD et industrialisation des déploiements",
         "Coordination entre développement, intégration, exploitation et MOA/MOE",
+        "Packaging Linux des applications pour la production",
         "Durée de mise en production réduite de 1 journée à 2 heures"
       ]
     },
@@ -49,7 +50,7 @@
       "highlights": [
         "Définition des stratégies de test (fonctionnel, performance, automatisation)",
         "Conception d'une plateforme de test conteneurisée (Docker)",
-        "Pilotage des équipes QA et des prestataires jusqu'à la mise en production"
+        "Pilotage des équipes QA et des prestataires jusqu'en production"
       ]
     },
     {
@@ -61,7 +62,7 @@
       "summary": "",
       "highlights": [
         "Validation d'un service critique d'authentification",
-        "Stratégie de test en environnement Linux et bilan de recette",
+        "Stratégie et bilan de recette, scripting de tests de webservices",
         "Automatisation portée de 30 à 60 % du périmètre de test"
       ]
     },
