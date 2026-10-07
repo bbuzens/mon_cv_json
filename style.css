@@ -167,7 +167,8 @@ body {
 .main .block:last-child { margin-bottom: 0; }
 
 /* Profil : aligné à gauche (pas d'espaces étirés) ; chaque ligne du
-   champ basics.summary devient un court paragraphe. */
+   champ basics.summary devient un court paragraphe, suivi le cas échéant
+   de la liste basics.highlights (même puces que les expériences). */
 .summary { margin: 0 0 1mm 0; text-align: left; }
 .summary:last-child { margin-bottom: 0; }
 
@@ -196,8 +197,19 @@ body {
   padding-left: 4mm;
   list-style: square;
 }
-.results li { margin-bottom: 0; }
+.results li { margin-bottom: 0; font-weight: 600; color: #1f2d3d; }
 .results li::marker { color: #2f6f9f; }
+
+/* work.activities (champ hors schéma JSON Resume) : missions du poste,
+   avant les réalisations ; puce ronde grise pour les distinguer des
+   résultats (.results) */
+.activities {
+  margin: 1.5mm 0 0 0;
+  padding-left: 4mm;
+  list-style: disc;
+}
+.activities li { margin-bottom: 0; }
+.activities li::marker { color: #888; }
 
 /* Les compétences peuvent se poursuivre sur la page suivante plutôt que
    de basculer en bloc et de laisser la colonne vide. */

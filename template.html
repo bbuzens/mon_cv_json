@@ -79,10 +79,17 @@
   </aside>
 
   <main class="main">
-    {% if basics.summary %}
+    {% if basics.summary or basics.highlights %}
     <section class="block">
       <h2>Profil</h2>
+      {% if basics.summary %}
       {% for para in basics.summary.split('\n') if para.strip() %}<p class="summary">{{ para | trim }}</p>{% endfor %}
+      {% endif %}
+      {% if basics.highlights %}
+      <ul class="results">
+        {% for h in basics.highlights %}<li>{{ h }}</li>{% endfor %}
+      </ul>
+      {% endif %}
     </section>
     {% endif %}
 
@@ -95,10 +102,14 @@
           <span class="entry-title">{{ w.position }} — {{ w.name }}</span>
           <span class="entry-date">{{ w.startDate|date_fr }} – {{ w.endDate|date_fr if w.endDate else 'Présent' }}</span>
         </div>
-        {% set d = duree(w.startDate, w.endDate) %}
-        {% set infos = [w.description, w.location, d] | select | list %}
+        {% set infos = [w.description, w.location] | select | list %}
         {% if infos %}<p class="entry-location">{{ infos | join(' · ') }}</p>{% endif %}
         {% if w.summary %}<p class="entry-summary">{{ w.summary }}</p>{% endif %}
+        {% if w.activities %}
+        <ul class="activities">
+          {% for a in w.activities %}<li>{{ a }}</li>{% endfor %}
+        </ul>
+        {% endif %}
         {% if w.highlights %}
         <ul class="results">
           {% for h in w.highlights %}<li>{{ h }}</li>{% endfor %}
