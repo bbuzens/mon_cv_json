@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="sidebar-bg"></div>
+<div class="sidebar-band"></div>
 <div class="page">
 
   <aside class="sidebar">
@@ -17,7 +17,8 @@
     {% endif %}
 
     <h1 class="name">{{ basics.name }}</h1>
-    <p class="label">{{ basics.label }}</p>
+    {% set lbl = basics.label.split('|') %}
+    <p class="label"><span class="label-main">{{ lbl[0] | trim }}</span>{% if lbl|length > 1 %}<span class="label-detail">{{ lbl[1:] | join('|') | trim }}</span>{% endif %}</p>
 
     <div class="block">
       <h2>Contact</h2>
@@ -25,7 +26,7 @@
         {% if basics.location %}<li>{{ basics.location.city }}{% if basics.location.region %}, {{ basics.location.region }}{% endif %}</li>{% endif %}
         {% if basics.phone %}<li>{{ basics.phone }}</li>{% endif %}
         {% if basics.email %}<li>{{ basics.email }}</li>{% endif %}
-        {% if basics.url %}<li>{{ basics.url | short_url }}</li>{% endif %}
+        {% if basics.url %}<li><a href="{{ basics.url }}">{{ basics.url | short_url }}</a></li>{% endif %}
         {% for p in basics.profiles %}
         <li>{{ p.network }} — {{ p.username }}</li>
         {% endfor %}
@@ -55,27 +56,6 @@
     </div>
     {% endif %}
 
-    {% if certificates %}
-    <div class="block">
-      <h2>Certifications</h2>
-      <ul class="plain-list">
-        {% for c in certificates %}
-        <li><strong>{{ c.name }}</strong>{% if c.date %} <span class="muted">— {{ c.date|date_fr }}</span>{% endif %}</li>
-        {% endfor %}
-      </ul>
-    </div>
-    {% endif %}
-
-    {% if interests %}
-    <div class="block">
-      <h2>Divers</h2>
-      <ul class="plain-list">
-        {% for i in interests %}
-        <li>{{ i.name }}{% if i.keywords %} : {% set kw = i.keywords|join(', ') %}{{ kw[:1] | lower }}{{ kw[1:] }}{% endif %}</li>
-        {% endfor %}
-      </ul>
-    </div>
-    {% endif %}
   </aside>
 
   <main class="main">
@@ -83,38 +63,27 @@
     <section class="block">
       <h2>Profil</h2>
       {% if basics.summary %}
-      {% for para in basics.summary.split('\n') if para.strip() %}<p class="summary">{{ para | trim }}</p>{% endfor %}
+      {% for para in basics.summary.split('\n') if para.strip() %}<p class="summary">{{ para | trim | emph }}</p>{% endfor %}
       {% endif %}
       {% if basics.highlights %}
       <ul class="results">
-        {% for h in basics.highlights %}<li>{{ h }}</li>{% endfor %}
+        {% for h in basics.highlights %}<li>{{ h | emph }}</li>{% endfor %}
       </ul>
       {% endif %}
     </section>
     {% endif %}
 
-    {% if work %}
+    {% if education %}
     <section class="block">
-      <h2>Expérience professionnelle</h2>
-      {% for w in work %}
+      <h2>Formation</h2>
+      {% for e in education %}
       <div class="entry">
         <div class="entry-header">
-          <span class="entry-title">{{ w.position }} — {{ w.name }}</span>
-          <span class="entry-date">{{ w.startDate|date_fr }} – {{ w.endDate|date_fr if w.endDate else 'Présent' }}</span>
+          <span class="entry-title">{{ e.studyType }}{% if e.area %}, {{ e.area }}{% endif %} · <span class="entry-org">{{ e.institution }}</span></span>
+          <span class="entry-date">{% if e.startDate %}{{ e.startDate|date_fr }} – {% endif %}{{ e.endDate|date_fr }}</span>
         </div>
-        {% set infos = [w.description, w.location] | select | list %}
-        {% if infos %}<p class="entry-location">{{ infos | join(' · ') }}</p>{% endif %}
-        {% if w.summary %}<p class="entry-summary">{{ w.summary }}</p>{% endif %}
-        {% if w.activities %}
-        <ul class="activities">
-          {% for a in w.activities %}<li>{{ a }}</li>{% endfor %}
-        </ul>
-        {% endif %}
-        {% if w.highlights %}
-        <ul class="results">
-          {% for h in w.highlights %}<li>{{ h }}</li>{% endfor %}
-        </ul>
-        {% endif %}
+        {% if e.location %}<p class="entry-location">{{ e.location }}</p>{% endif %}
+        {% if e.summary %}<p class="entry-summary">{{ e.summary }}</p>{% endif %}
       </div>
       {% endfor %}
     </section>
@@ -132,7 +101,7 @@
         {% if pr.description %}<p class="entry-location">{{ pr.description }}</p>{% endif %}
         {% if pr.highlights %}
         <ul class="results">
-          {% for h in pr.highlights %}<li>{{ h }}</li>{% endfor %}
+          {% for h in pr.highlights %}<li>{{ h | emph }}</li>{% endfor %}
         </ul>
         {% endif %}
       </div>
@@ -140,19 +109,51 @@
     </section>
     {% endif %}
 
-    {% if education %}
+    {% if work %}
     <section class="block">
-      <h2>Formation</h2>
-      {% for e in education %}
+      <h2>Expérience professionnelle</h2>
+      {% for w in work %}
       <div class="entry">
         <div class="entry-header">
-          <span class="entry-title">{{ e.studyType }}{% if e.area %}, {{ e.area }}{% endif %} — {{ e.institution }}</span>
-          <span class="entry-date">{% if e.startDate %}{{ e.startDate|date_fr }} – {% endif %}{{ e.endDate|date_fr }}</span>
+          <span class="entry-title">{{ w.position }} · <span class="entry-org">{{ w.name }}</span></span>
+          <span class="entry-date">{{ w.startDate|date_fr }} – {{ w.endDate|date_fr if w.endDate else 'Présent' }}</span>
         </div>
-        {% if e.location %}<p class="entry-location">{{ e.location }}</p>{% endif %}
-        {% if e.summary %}<p class="entry-summary">{{ e.summary }}</p>{% endif %}
+        {% set infos = [w.description, w.location] | select | list %}
+        {% if infos %}<p class="entry-location">{{ infos | join(' · ') }}</p>{% endif %}
+        {% if w.summary %}<p class="entry-summary">{{ w.summary | emph }}</p>{% endif %}
+        {% if w.activities %}
+        <ul class="activities">
+          {% for a in w.activities %}<li>{{ a }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+        {% if w.highlights %}
+        <ul class="results">
+          {% for h in w.highlights %}<li>{{ h | emph }}</li>{% endfor %}
+        </ul>
+        {% endif %}
       </div>
       {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if certificates %}
+    <section class="block">
+      <h2>Certifications</h2>
+      {% for c in certificates %}
+      <div class="entry entry-compact">
+        <div class="entry-header">
+          <span class="entry-title">{{ c.name }}{% if c.issuer %} · <span class="entry-org">{{ c.issuer }}</span>{% endif %}</span>
+          {% if c.date %}<span class="entry-date">{{ c.date|date_fr }}</span>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if interests %}
+    <section class="block">
+      <h2>Centres d'intérêt</h2>
+      <p class="summary">{% for i in interests %}<strong>{{ i.name }}</strong>{% if i.keywords %} : {{ i.keywords|join(', ') }}{% endif %}{% if not loop.last %} · {% endif %}{% endfor %}</p>
     </section>
     {% endif %}
 

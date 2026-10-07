@@ -1,23 +1,16 @@
+/* Mise en page PDF (WeasyPrint) :
+   - page 1 : colonne sombre à gauche (identité, contact, compétences...)
+     et contenu principal à droite ;
+   - pages suivantes : contenu principal en pleine largeur, sans bande
+     sombre (plus de colonne vide ni d'encre gaspillée).
+   Les marges de page (et non plus des padding de cellule) donnent les
+   espaces en tête et en bas de chaque page. */
 @page {
   size: A4;
-  margin: 0;
+  margin: 13mm 14mm 13mm 14mm;
 }
-
-/* Bande de la sidebar répétée sur chaque page (position: fixed en PDF) :
-   elle descend jusqu'en bas même quand le contenu de la colonne s'arrête
-   avant (page 2, etc.). Rectangle plein -> bord net, sans dégradé. */
-.sidebar-bg { display: none; }
-@media print {
-  .sidebar-bg {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 71.4mm; /* 34 % de 210mm, comme .sidebar */
-    height: 297mm;
-    background: #1f2d3d;
-    z-index: -1;
-  }
+@page :first {
+  margin-left: 76mm; /* 63mm de colonne + 13mm de gouttière */
 }
 
 * { box-sizing: border-box; }
@@ -25,35 +18,63 @@
 body {
   margin: 0;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 10.5pt;
+  font-size: 10pt;
   color: #222;
-  line-height: 1.5; /* interligne unique pour tout le CV (repère WCAG : 1,5) */
+  line-height: 1.4;
 }
 
-.page {
-  width: 210mm;
-  display: table;
-  table-layout: fixed;
-}
-
-/* --- Sidebar (cellule de table : se répète et pagine proprement) --- */
+/* --- Colonne de gauche (page 1 uniquement) --- */
 .sidebar {
-  display: table-cell;
-  width: 34%;
   background: #1f2d3d;
   color: #eef1f5;
-  padding: 12mm 11mm; /* marges latérales > 1 cm */
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
+  padding: 12mm 9mm;
+}
+
+@media print {
+  /* Sortie du flux et posée dans la marge gauche de la page 1 ; le fond
+     sombre pleine hauteur vient de .sidebar-band. Le contenu de la colonne
+     doit tenir sur la page 1 (les certifications et centres d'intérêt
+     sont dans la colonne principale). */
+  /* Fond sombre pleine hauteur de la page 1 (63mm = 30 % de 210mm) */
+  .sidebar-band {
+    position: absolute;
+    top: -13mm;
+    left: -76mm;
+    width: 63mm;
+    height: 297mm;
+    background: #1f2d3d;
+    z-index: -1;
+  }
+  .sidebar {
+    position: absolute;
+    top: -13mm;
+    left: -76mm;
+    width: 63mm;
+    background: transparent;
+  }
+}
+
+@media screen {
+  .sidebar-band { display: none; }
+  /* Version web : deux colonnes simples */
+  body { background: #e9edf1; }
+  .page {
+    display: flex;
+    max-width: 210mm;
+    margin: 0 auto;
+    background: #fff;
+  }
+  .sidebar { flex: 0 0 30%; }
+  .main { flex: 1; padding: 12mm; }
 }
 
 .photo {
-  width: 32mm;
-  height: 32mm;
+  width: 30mm;
+  height: 30mm;
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  margin: 0 auto 6mm auto;
+  margin: 0 auto 5mm auto;
   border: 2px solid #4a6b8a;
 }
 
@@ -71,104 +92,99 @@ body {
 .name {
   font-size: 15pt;
   text-align: center;
-  margin: 0 0 1mm 0;
+  margin: 0 0 1.5mm 0;
   font-weight: 600;
   letter-spacing: 0.3pt;
 }
 
+/* basics.label : « Cible | précision » -> deux lignes, la cible en avant */
 .label {
   text-align: center;
-  font-size: 10pt;
+  margin: 0 0 7mm 0;
+}
+.label-main {
+  display: block;
+  font-size: 10.5pt;
+  font-weight: 600;
+  color: #ffffff;
+}
+.label-detail {
+  display: block;
+  font-size: 9.5pt;
   color: #a9c1d9;
-  margin: 0 0 8mm 0;
 }
 
-/* Même taille et même espacement des lettres que les titres de la
-   colonne principale (.main h2) */
 .sidebar h2 {
-  font-size: 11pt;
+  font-size: 10.5pt;
   text-transform: uppercase;
   letter-spacing: 0.6pt;
   color: #7fa8cc;
   border-bottom: 1px solid #3a4d63;
-  padding-bottom: 1.5mm;
-  margin: 0 0 3mm 0;
+  padding-bottom: 1.2mm;
+  margin: 0 0 2.5mm 0;
 }
 
-.sidebar .block {
-  margin-bottom: 7mm;
-  break-inside: avoid;
-  page-break-inside: avoid;
-}
+.sidebar .block { margin-bottom: 6mm; }
+.sidebar .block:last-child { margin-bottom: 0; }
 
 .contact-list, .plain-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 10pt;
+  font-size: 9.5pt;
 }
-.contact-list li, .plain-list li { margin-bottom: 1.5mm; word-break: break-word; }
+.contact-list li, .plain-list li { margin-bottom: 1.2mm; word-break: break-word; }
+.contact-list a { color: inherit; text-decoration: none; }
 
-.muted { color: #a9c1d9; font-size: 10pt; }
+.muted { color: #a9c1d9; }
 
 .skill-cat {
-  font-size: 10pt;
+  font-size: 9.5pt;
   font-weight: 600;
-  margin: 3mm 0 1mm 0;
+  margin: 2.5mm 0 0.8mm 0;
   color: #ffffff;
 }
+.skill-cat:first-of-type { margin-top: 0; }
 
-/* Compétences en liste simple : une compétence par ligne, puce discrète
-   dans la couleur d'accent, retrait suspendu si le libellé passe à la ligne
-   (les étiquettes arrondies se coupaient sur deux lignes à 10 pt). */
+/* Une compétence par ligne, puce carrée dans la couleur d'accent,
+   retrait suspendu si le libellé passe à la ligne. */
 .tag-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 1mm 0;
+  margin: 0;
 }
 .tag-list li {
   position: relative;
-  padding-left: 3.5mm;
-  margin-bottom: 0.8mm;
-  font-size: 10pt;
+  padding-left: 3.2mm;
+  margin-bottom: 0.6mm;
+  font-size: 9.5pt;
 }
 .tag-list li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 2.1mm;
-  width: 1.4mm;
-  height: 1.4mm;
+  top: 1.9mm;
+  width: 1.3mm;
+  height: 1.3mm;
   background: #7fa8cc;
 }
 
-/* --- Main column --- */
-.main {
-  display: table-cell;
-  width: 66%;
-  padding: 14mm 12mm;
-  background: #ffffff;
-  vertical-align: top;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-}
-
+/* --- Contenu principal --- */
 .main h2 {
-  font-size: 11pt;
+  font-size: 10.5pt;
   text-transform: uppercase;
   letter-spacing: 0.6pt;
   color: #1f2d3d;
   border-bottom: 1.5pt solid #1f2d3d;
-  padding-bottom: 1.5mm;
-  margin: 0 0 4mm 0;
+  padding-bottom: 1.2mm;
+  margin: 0 0 3mm 0;
+  break-after: avoid;
+  page-break-after: avoid;
 }
 
-.main .block { margin-bottom: 7mm; }
+.main .block { margin-bottom: 6mm; }
 .main .block:last-child { margin-bottom: 0; }
 
-/* Profil : aligné à gauche (pas d'espaces étirés) ; chaque ligne du
-   champ basics.summary devient un court paragraphe, suivi le cas échéant
-   de la liste basics.highlights (même puces que les expériences). */
 .summary { margin: 0 0 1mm 0; text-align: left; }
 .summary:last-child { margin-bottom: 0; }
 
@@ -179,41 +195,49 @@ body {
 }
 .entry:last-child { margin-bottom: 0; }
 
+/* Titre à gauche, date calée à droite (table plutôt que flex : WeasyPrint
+   place mal les span imbriqués dans un conteneur flex) */
 .entry-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 4mm;
+  display: table;
+  width: 100%;
+}
+.entry-header > .entry-title { display: table-cell; }
+.entry-header > .entry-date {
+  display: table-cell;
+  width: 1%;
+  padding-left: 4mm;
+  text-align: right;
+  vertical-align: top;
 }
 
-.entry-title { font-weight: 600; font-size: 10.3pt; }
-.entry-date { font-size: 10pt; color: #555; white-space: nowrap; }
-.entry-location { font-size: 10pt; font-style: italic; color: #555; margin: 0.5mm 0 1mm 0; }
-.entry-summary { margin: 1mm 0; }
+.entry-title { font-weight: 600; font-size: 10.3pt; color: #1f2d3d; }
+.entry-date { font-size: 9.5pt; color: #555; white-space: nowrap; }
+.entry-org { font-weight: 600; color: #2f6f9f; }
+.entry-location { font-size: 9.5pt; font-style: italic; color: #555; margin: 0.3mm 0 0.8mm 0; }
+.entry-summary { margin: 0.8mm 0; }
 
-/* work.highlights : 2 à 4 réalisations clés par expérience */
+/* Réalisations : texte normal ; seuls les passages entre **...** dans
+   resume.json (chiffres clés) ressortent en gras. */
 .results {
-  margin: 1.5mm 0 0 0;
+  margin: 1mm 0 0 0;
   padding-left: 4mm;
   list-style: square;
 }
-.results li { margin-bottom: 0; font-weight: 600; color: #1f2d3d; }
+.results li { margin-bottom: 0.3mm; }
 .results li::marker { color: #2f6f9f; }
+.results strong, .summary strong { color: #1f2d3d; }
 
-/* work.activities (champ hors schéma JSON Resume) : missions du poste,
-   avant les réalisations ; puce ronde grise pour les distinguer des
-   résultats (.results) */
+/* work.activities (champ hors schéma JSON Resume) : toujours pris en
+   charge, puce ronde grise pour les distinguer des réalisations */
 .activities {
-  margin: 1.5mm 0 0 0;
+  margin: 1mm 0 0 0;
   padding-left: 4mm;
   list-style: disc;
 }
 .activities li { margin-bottom: 0; }
 .activities li::marker { color: #888; }
 
-/* Les compétences peuvent se poursuivre sur la page suivante plutôt que
-   de basculer en bloc et de laisser la colonne vide. */
-.sidebar .block-skills { break-inside: auto; page-break-inside: auto; }
-
 /* Liens (ex. profil Hack The Box) : cliquables dans le PDF, sans changer l'aspect */
 .entry-title a { color: inherit; text-decoration: none; }
+
+.entry-compact { margin-bottom: 1.2mm; }

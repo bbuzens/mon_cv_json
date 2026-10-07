@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Benoît Buzens",
-    "label": "Ingénieur Cybersécurité",
+    "label": "Stage en cybersécurité | 4 à 5 mois, dès avril 2027",
     "image": "photo.jpg",
     "email": "benoit.buzens@gmail.com",
     "phone": "06 31 02 35 27",
     "url": "https://www.linkedin.com/in/benoit-buzens/",
-    "summary": "Fort de 14 ans d'expérience, dont 10 comme Lead QA et DevOps Team Lead sur des services essentiels (santé, télécoms), je me spécialise en cybersécurité.\nDans des projets de solution d'identité, j'ai acquis un socle qui me sert dans mes études actuelles (TLS, PKI, OIDC).\nMon ambition est de concevoir des systèmes sécurisés comme j'ai pu le faire pour des infrastructures de test.\nJe recherche un stage en cybersécurité de 4 à 5 mois dès avril 2027.",
+    "summary": "Fort de 14 ans d'expérience, dont 10 comme Lead QA puis DevOps Team Lead sur des services essentiels (santé, télécoms), je me spécialise en cybersécurité au Mastère Spécialisé de CentraleSupélec.\nMes projets de solution d'identité m'ont donné un socle concret (TLS, PKI, OIDC).\nMon ambition : concevoir des systèmes sécurisés, comme je l'ai fait pour des infrastructures de test.",
     "location": {
       "city": "Le Mans"
     }
@@ -25,19 +25,12 @@
       "startDate": "2025-03",
       "endDate": "2026-08",
       "location": "Le Mans",
-      "summary": "Garantir les performances backoffices du SI APCV (carte Vitale dématérialisée) :",
-      "activities": [
-        "Créer la politique et la stratégie qualité des tests de performance",
-        "Piloter l'activité de tests de performance",
-        "Concevoir le banc de test (JMeter, Gitlab CI, OpenShift, Virtualisation)",
-        "Développer les outils de tests et les scripts d'injection (Jmeter, Groovy, Java/Spring Boot, Python/FastAPI)",
-        "Assurer le support auprès de l'exploitant en charge de réaliser les tests",
-        "Analyser les performances à travers les métriques choisies (Grafana, ELK)",
-        "Rédiger un procès verbal de tests de performance et un rapport d'analyse des performances"
-      ],
+      "summary": "Garantir les performances du back-office APCV (carte Vitale dématérialisée).",
       "highlights": [
-        "Couverture technique des tests portée de 20 à 80 %",
-        "Durée des campagnes de tests divisée par 2"
+        "Stratégie et pilotage des tests de performance, support à l'exploitant",
+        "Conception du banc de test et des scripts d'injection (JMeter, GitLab CI, OpenShift, Java/Spring Boot, Python/FastAPI)",
+        "Analyse des métriques (Grafana, ELK), procès-verbal et rapport de performance",
+        "Couverture technique des tests portée de **20 à 80 %**, durée des campagnes **divisée par 2**"
       ]
     },
     {
@@ -46,16 +39,11 @@
       "startDate": "2023-09",
       "endDate": "2025-02",
       "location": "Le Mans",
-      "summary": "",
-      "activities" : [
-        "Coordonner les activités de la System Team (Agile, Scrum, Safe)",
-        "Assurer le lien opérationnel avec le partenaire d'infogérance (au sein d'un marché public)",
-        "Valider les orientations techniques concernant la CI/CD (Gitlab CI, Docker, Kubernetes, OpenShift)"
-      ],
+      "summary": "Coordination de la System Team (Agile, SAFe) et du partenaire d'infogérance, dans un marché public.",
       "highlights": [
-        "Création d'une System Team CI/CD (Docker, Kubernetes, OpenShift)",
+        "Création de la System Team CI/CD et validation des choix techniques (GitLab CI, Docker, Kubernetes, OpenShift)",
         "Étude de ZAP (DAST) à la demande du service sécurité",
-        "Mise en production : de 1 journée à 2 heures"
+        "Mise en production ramenée de **1 journée à 2 heures**"
       ]
     },
     {
@@ -64,22 +52,13 @@
       "startDate": "2018-08",
       "endDate": "2023-09",
       "location": "Le Mans",
-      "summary": "",
-      "activities": [
-        "Piloter l'activité QA et les prestataires",
-        "Automatiser les tests fonctionnels (Postman, PyTest, RobotFramework)",
-        "Intégrer les applicatifs sur serveur Linux (Debian, RedHat)",
-        "Apporter un support technique aux interconnexions avec les partenaires",
-        "Spécifier les actions de mise en production et les tests de recette",
-        "Rendre compte des bilans de tests et des anomalies (Jira, Confluence, HP ALM)"
-      ],
+      "summary": "Pilotage de la QA et des prestataires, intégration sur Linux (Debian, RedHat), recette et mise en production.",
       "highlights": [
-        "Intégration et vérification de services TLS en staging et production",
+        "Intégration et vérification de services TLS en staging et production ; services F5 BIG-IP alignés sur l'ANSSI",
         "Maintenance d'une PKI de test, certificats X.509 (OpenSSL, P12, JKS)",
-        "Diagnostic réseau (Wireshark, tcpdump, nmap, netcat)",
-        "Spécification des services F5 BIG-IP, TLS aligné sur l'ANSSI",
-        "Tests fonctionnels de l'authentification OIDC (jetons JWT)",
-        "Accompagnement de tests d'intrusion menés par Oppida"
+        "Raccordement des partenaires : diagnostic réseau (Wireshark, tcpdump, nmap, netcat)",
+        "Tests de l'authentification OIDC (jetons JWT) ; accompagnement de tests d'intrusion (Oppida)",
+        "Automatisation des tests fonctionnels (Postman, PyTest, Robot Framework)"
       ]
     },
     {
@@ -88,17 +67,10 @@
       "startDate": "2016-10",
       "endDate": "2018-07",
       "location": "Caen",
-      "summary": "",
-      "activities": [
-        "Piloter l'activité QA",
-        "Automatiser les tests fonctionnels (Postman, PyTest, RobotFramework)",
-        "Rendre compte des bilans de tests et des anomalies (Jira, Confluence, HP ALM)"
-      ],
+      "summary": "Pilotage de la QA d'un service critique d'authentification.",
       "highlights": [
-        "Validation d'un service critique d'authentification",
-        "Audit de configuration des serveurs Linux d'intégration",
-        "Évaluation de ZAP pour tester le service d'authentification",
-        "Automatisation portée de 30 à 60 % des tests"
+        "Audit de configuration des serveurs Linux d'intégration ; évaluation de ZAP",
+        "Automatisation des tests portée de **30 à 60 %**"
       ]
     },
     {
@@ -107,12 +79,7 @@
       "startDate": "2012-02",
       "endDate": "2016-09",
       "location": "Rennes",
-      "summary": "",
-      "activities": [
-        "Qualifier un système de facturation (EDF Commerce)",
-        "Développer des tests automatisés (UFT, SQL)",
-        "Structurer les pratiques QA"
-      ]
+      "summary": "Qualification d'un système de facturation (EDF Commerce), tests automatisés (UFT, SQL), structuration des pratiques QA."
     }
   ],
   "education": [
@@ -137,19 +104,35 @@
   "skills": [
     {
       "name": "Cybersécurité",
-      "keywords": ["PKI X.509, TLS serveur et mutuel (OpenSSL)", "OIDC (jetons JWT)", "Scan de vulnérabilités (Trivy, Dependency-Track)", "Analyse réseau (Wireshark, tcpdump, nmap)", "EBIOS RM, ISO 27001 (MS en cours)"]
+      "keywords": [
+        "PKI X.509, TLS serveur et mutuel (OpenSSL)",
+        "OIDC (jetons JWT)",
+        "Scan de vulnérabilités (Trivy, Dependency-Track)",
+        "Analyse réseau (Wireshark, tcpdump, nmap)",
+        "EBIOS RM, ISO 27001 (MS en cours)"
+      ]
     },
     {
       "name": "DevOps & infrastructure",
-      "keywords": ["Docker, Kubernetes, OpenShift", "CI/CD, secrets (Vault)", "Linux / UNIX"]
+      "keywords": [
+        "Docker, Kubernetes, OpenShift",
+        "CI/CD, secrets (Vault)",
+        "Linux / UNIX"
+      ]
     },
     {
       "name": "Développement & qualité",
-      "keywords": ["Java, Python (scripting)", "Stratégie et automatisation des tests (JMeter)"]
+      "keywords": [
+        "Java, Python (scripting)",
+        "Stratégie et automatisation des tests (JMeter)"
+      ]
     },
     {
       "name": "Pilotage & management",
-      "keywords": ["Pilotage d'équipes et de prestataires", "Interface MOA/MOE et partenaires"]
+      "keywords": [
+        "Pilotage d'équipes et de prestataires",
+        "Interface MOA/MOE et partenaires"
+      ]
     }
   ],
   "languages": [
@@ -163,9 +146,21 @@
     }
   ],
   "certificates": [
-    {"name": "SAFe® Agilist", "date": "2024", "issuer": "Scaled Agile, Inc."},
-    {"name": "DevOps Foundation", "date": "2022", "issuer": "DevOps Institute"},
-    {"name": "ISTQB Advanced : Test Analyst, Technical Test Analyst", "date": "2019", "issuer": "ISTQB"}
+    {
+      "name": "SAFe® Agilist",
+      "date": "2024",
+      "issuer": "Scaled Agile, Inc."
+    },
+    {
+      "name": "DevOps Foundation",
+      "date": "2022",
+      "issuer": "DevOps Institute"
+    },
+    {
+      "name": "ISTQB Advanced : Test Analyst, Technical Test Analyst",
+      "date": "2019",
+      "issuer": "ISTQB"
+    }
   ],
   "interests": [
     {

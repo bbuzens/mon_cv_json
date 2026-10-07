@@ -19,6 +19,7 @@ import unicodedata
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
+from markupsafe import Markup, escape
 from weasyprint import HTML
 
 BASE_DIR = Path(__file__).parent
@@ -47,6 +48,18 @@ def format_date(value):
 def short_url(url):
     """"https://www.linkedin.com/in/x/" -> "linkedin.com/in/x" (tient sur une ligne)."""
     return re.sub(r"^https?://(www\.)?", "", str(url or "")).rstrip("/")
+
+
+def emph(text):
+    """Met en gras les passages entre **...** (ex. chiffres clés), le reste échappé.
+
+    "Couverture portée de **20 à 80 %**" -> "Couverture portée de <strong>20 à 80 %</strong>"
+    """
+    parts = str(text or "").split("**")
+    return Markup("".join(
+        f"<strong>{escape(p)}</strong>" if i % 2 else str(escape(p))
+        for i, p in enumerate(parts)
+    ))
 
 
 def slugify(text):
@@ -92,6 +105,7 @@ def main():
     env = Environment(loader=FileSystemLoader(str(BASE_DIR)))
     env.filters["date_fr"] = format_date
     env.filters["short_url"] = short_url
+    env.filters["emph"] = emph
     template = env.get_template("template.html")
     rendered_html = template.render(
         **data,
