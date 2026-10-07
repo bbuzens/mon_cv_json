@@ -9,7 +9,7 @@ HTML/CSS que vous maîtrisez entièrement, et un export PDF fidèle au CSS via
 - `resume.json` — vos données (format JSON Resume). C'est le seul fichier à
   éditer au quotidien.
 - `template.html` — le gabarit Jinja2 qui structure le CV.
-- `style.css` — le style visuel (colonne sombre en page 1, pleine largeur ensuite).
+- `style.css` — le style visuel (colonne sombre à gauche sur chaque page).
 - `generate_pdf.py` — script qui assemble le tout et génère `output/NOM.html`
   et `output/NOM.pdf` (voir « Nom des fichiers » ci-dessous).
 - `photo.jpg` (optionnel) — à ajouter vous-même à la racine du projet. Sans
@@ -54,11 +54,13 @@ pip install jinja2 weasyprint
   DOM actuel place la sidebar avant le contenu principal ; si vous
   postulez via un ATS strict, gardez un export PDF/texte de secours en une
   colonne.
-- **Deux pages** : la colonne de gauche (photo, contact, compétences,
-  langues) n'existe qu'en page 1 et doit y tenir ; la suite du contenu
-  passe en pleine largeur. Certifications et centres d'intérêt sont dans
-  la colonne principale. Si la colonne déborde, raccourcissez les
-  compétences.
+- **Deux pages** : la colonne de gauche porte photo, contact, compétences
+  et langues en page 1, certifications et centres d'intérêt en page 2.
+  Chaque partie doit tenir sur sa page ; si elle déborde, raccourcissez
+  les compétences.
+- **Poste visé** : `basics.label` au format `Poste | précision`
+  (ex. `Ingénieur Cybersécurité | Stage de 4 à 5 mois, dès avril 2027`)
+  s'affiche en titre de la colonne principale.
 - **Mise en gras** : dans `resume.json`, entourez de `**...**` le passage à
   faire ressortir (ex. `portée de **20 à 80 %**`) ; le reste de la puce
   reste en texte normal.

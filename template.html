@@ -17,8 +17,6 @@
     {% endif %}
 
     <h1 class="name">{{ basics.name }}</h1>
-    {% set lbl = basics.label.split('|') %}
-    <p class="label"><span class="label-main">{{ lbl[0] | trim }}</span>{% if lbl|length > 1 %}<span class="label-detail">{{ lbl[1:] | join('|') | trim }}</span>{% endif %}</p>
 
     <div class="block">
       <h2>Contact</h2>
@@ -56,9 +54,38 @@
     </div>
     {% endif %}
 
+    <div class="sidebar-more">
+    {% if certificates %}
+    <div class="block">
+      <h2>Certifications</h2>
+      <ul class="plain-list">
+        {% for c in certificates %}
+        <li><strong>{{ c.name }}</strong>{% if c.issuer %}<br><span class="muted">{{ c.issuer }}{% if c.date %} · {{ c.date|date_fr }}{% endif %}</span>{% endif %}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    {% if interests %}
+    <div class="block">
+      <h2>Centres d'intérêt</h2>
+      <ul class="plain-list">
+        {% for i in interests %}
+        <li><strong>{{ i.name }}</strong>{% if i.keywords %} : {{ i.keywords|join(', ') }}{% endif %}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+    </div>
   </aside>
 
   <main class="main">
+    {% set lbl = basics.label.split('|') %}
+    <header class="headline">
+      <p class="headline-title">{{ lbl[0] | trim }}</p>
+      {% if lbl|length > 1 %}<p class="headline-detail">{{ lbl[1:] | join('|') | trim }}</p>{% endif %}
+    </header>
+
     {% if basics.summary or basics.highlights %}
     <section class="block">
       <h2>Profil</h2>
@@ -133,27 +160,6 @@
         {% endif %}
       </div>
       {% endfor %}
-    </section>
-    {% endif %}
-
-    {% if certificates %}
-    <section class="block">
-      <h2>Certifications</h2>
-      {% for c in certificates %}
-      <div class="entry entry-compact">
-        <div class="entry-header">
-          <span class="entry-title">{{ c.name }}{% if c.issuer %} · <span class="entry-org">{{ c.issuer }}</span>{% endif %}</span>
-          {% if c.date %}<span class="entry-date">{{ c.date|date_fr }}</span>{% endif %}
-        </div>
-      </div>
-      {% endfor %}
-    </section>
-    {% endif %}
-
-    {% if interests %}
-    <section class="block">
-      <h2>Centres d'intérêt</h2>
-      <p class="summary">{% for i in interests %}<strong>{{ i.name }}</strong>{% if i.keywords %} : {{ i.keywords|join(', ') }}{% endif %}{% if not loop.last %} · {% endif %}{% endfor %}</p>
     </section>
     {% endif %}
 
