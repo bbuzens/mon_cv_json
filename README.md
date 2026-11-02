@@ -12,13 +12,15 @@ HTML/CSS que vous maîtrisez entièrement, et un export PDF fidèle au CSS via
 - `style.css` — le style visuel (colonne sombre à gauche sur chaque page).
 - `generate_pdf.py` — script qui assemble le tout et génère `output/NOM.html`
   et `output/NOM.pdf` (voir « Nom des fichiers » ci-dessous).
+- `generate_ats.py`, `template_ats.html`, `style_ats.css` — variante « ATS »
+  une colonne (voir « Version ATS » ci-dessous).
 - `photo.jpg` (optionnel) — à ajouter vous-même à la racine du projet. Sans
   ce fichier, un cercle avec vos initiales est affiché à la place.
 
 ## Installation
 
 ```bash
-pip install jinja2 weasyprint
+pip install -r requirements.txt
 ```
 
 ## Utilisation
@@ -46,14 +48,38 @@ pip install jinja2 weasyprint
    une publication directe sur votre site personnel (copiez `style.css` à
    côté).
 
+## Version ATS (Glassdoor, Workday, Taleo...)
+
+Certaines plateformes refusent la version graphique, faute de pouvoir la
+lire. `generate_ats.py` produit, à partir du même `resume.json`, une
+variante pensée pour les parseurs :
+
+```bash
+python generate_ats.py                      # output/NOM-ats.pdf et .docx
+python generate_ats.py -i resume_full.json  # autre source JSON
+python generate_ats.py -o cv-ats-acme       # nom imposé
+```
+
+- une seule colonne, ordre de lecture identique à l'ordre du document ;
+- ni photo, ni icône, ni tableau, ni couleur, ni en-tête/pied de page ;
+- sections classiques (Profil, Formation, Compétences, Expérience
+  professionnelle, Certifications, Projets, Langues, Centres d'intérêt) ;
+- dates au format `MM/AAAA`, police standard, ligatures désactivées ;
+- métadonnées réduites à l'auteur (« Prénom NOM », modifiable avec
+  `--author`), au titre et au sujet.
+
+Le `.docx` (Word natif, styles Titre 1/Titre 2 et puces Word) est le format
+le mieux lu par la plupart des ATS ; le PDF reste en texte sélectionnable.
+Pour vérifier : `pdftotext output/NOM-ats.pdf -` doit restituer le CV dans
+l'ordre, sans caractère manquant.
+
 ## Points d'attention
 
 - **Compatibilité ATS** : la mise en page en deux colonnes (sidebar) est
   esthétique mais certains outils de parsing automatisés lisent le texte
   dans l'ordre du HTML, qui peut ne pas correspondre à l'ordre visuel. Le
   DOM actuel place la sidebar avant le contenu principal ; si vous
-  postulez via un ATS strict, gardez un export PDF/texte de secours en une
-  colonne.
+  postulez via un ATS strict, utilisez la version ATS (`generate_ats.py`).
 - **Deux pages** : la colonne de gauche porte photo, contact, compétences
   et langues en page 1, certifications et centres d'intérêt en page 2.
   Chaque partie doit tenir sur sa page ; si elle déborde, raccourcissez
@@ -75,5 +101,3 @@ pip install jinja2 weasyprint
   `#2e3f53`, `#7fa8cc`).
 - Ajouter une section "Certifications" ou "Publications" (déjà prévues par
   le schéma JSON Resume, à intégrer dans `template.html` si besoin).
-- Générer une variante one-column pour un dépôt ATS-safe en parallèle de la
-  version sidebar.
