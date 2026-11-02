@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>{{ basics.name }} - CV</title>
+<meta name="author" content="{{ author }}">
+<link rel="stylesheet" href="style_ats.css">
+</head>
+<body>
+{#- Variante ATS : une seule colonne, ordre du DOM = ordre de lecture,
+    pas de tableau, d'icône, d'image ni d'en-tête/pied de page. -#}
+
+<h1>{{ basics.name }}</h1>
+<p class="title">{{ basics.label | replace('|', '-') }}</p>
+<p class="contact">
+  {%- set contact = [] -%}
+  {%- if basics.email %}{% set _ = contact.append(basics.email) %}{% endif -%}
+  {%- if basics.phone %}{% set _ = contact.append(basics.phone) %}{% endif -%}
+  {%- if basics.location and basics.location.city %}{% set _ = contact.append(basics.location.city) %}{% endif -%}
+  {%- if basics.url %}{% set _ = contact.append(basics.url | short_url) %}{% endif -%}
+  {{ contact | join(' | ') }}
+</p>
+
+{% if basics.summary %}
+<h2>Profil</h2>
+{% for para in basics.summary.split('\n') if para.strip() %}<p>{{ para | trim | emph }}</p>{% endfor %}
+{% endif %}
+
+{% if education %}
+<h2>Formation</h2>
+{% for e in education %}
+<div class="entry">
+  <h3>{{ e.studyType }}{% if e.area %}, {{ e.area }}{% endif %}</h3>
+  <p class="meta">{{ e.institution }}{% if e.location %}, {{ e.location }}{% endif %} | {% if e.startDate %}{{ e.startDate | date_num }} - {% endif %}{{ e.endDate | date_num }}</p>
+  {% if e.summary %}<p>{{ e.summary }}</p>{% endif %}
+</div>
+{% endfor %}
+{% endif %}
+
+{% if skills %}
+<h2>Compétences</h2>
+<ul>
+  {% for s in skills %}<li><strong>{{ s.name }} :</strong> {{ s.keywords | join(', ') }}</li>{% endfor %}
+</ul>
+{% endif %}
+
+{% if work %}
+<h2>Expérience professionnelle</h2>
+{% for w in work %}
+<div class="entry">
+  <h3>{{ w.position }}</h3>
+  <p class="meta">{{ w.name }}{% if w.location %}, {{ w.location }}{% endif %} | {{ w.startDate | date_num }} - {{ w.endDate | date_num if w.endDate else 'Présent' }}</p>
+  {% if w.description %}<p>{{ w.description }}</p>{% endif %}
+  {% if w.summary %}<p>{{ w.summary | emph }}</p>{% endif %}
+  {% set items = (w.activities or []) + (w.highlights or []) %}
+  {% if items %}
+  <ul>{% for h in items %}<li>{{ h | emph }}</li>{% endfor %}</ul>
+  {% endif %}
+</div>
+{% endfor %}
+{% endif %}
+
+{% if certificates %}
+<h2>Certifications</h2>
+<ul>
+  {% for c in certificates %}<li>{{ c.name }}{% if c.issuer %}, {{ c.issuer }}{% endif %}{% if c.date %} ({{ c.date }}){% endif %}</li>{% endfor %}
+</ul>
+{% endif %}
+
+{% if projects %}
+<h2>Projets</h2>
+{% for pr in projects %}
+<div class="entry">
+  <h3>{{ pr.name | replace(' — ', ' - ') }}</h3>
+  {% if pr.description %}<p class="meta">{{ pr.description | replace(' · ', ', ') }}</p>{% endif %}
+  {% if pr.highlights %}
+  <ul>{% for h in pr.highlights %}<li>{{ h | emph }}</li>{% endfor %}</ul>
+  {% endif %}
+</div>
+{% endfor %}
+{% endif %}
+
+{% if languages %}
+<h2>Langues</h2>
+<ul>
+  {% for l in languages %}<li>{{ l.language }} : {{ l.fluency }}</li>{% endfor %}
+</ul>
+{% endif %}
+
+{% if interests %}
+<h2>Centres d'intérêt</h2>
+<ul>
+  {% for i in interests %}<li>{{ i.name }}{% if i.keywords %} : {{ i.keywords | join(', ') }}{% endif %}</li>{% endfor %}
+</ul>
+{% endif %}
+
+</body>
+</html>

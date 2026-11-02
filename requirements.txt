@@ -1,2 +1,4 @@
 jinja2
 weasyprint
+python-docx
+pypdf
